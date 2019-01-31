@@ -24,3 +24,12 @@ def does_not_end_with_a(string):
 
 def contains_three_as(string):
     return re.search('a.*a.*a', string)
+
+def three_letters(string):
+    return re.fullmatch('[a-zA-Z]{3}', string)
+
+def three_digits(string):
+    return re.fullmatch(r'\d{3}', string)
+
+def is_dna(string):
+    return re.fullmatch(r'[ACGT]*', string)

@@ -11,7 +11,6 @@ def problem(id):
     with active_tested_implementation_from_id(id):
         yield
 
-
 def match(string):
     f = current_active_tested_implementation()
     assert_truthy(f(string), message=f"'{string}' should match regex")
@@ -107,6 +106,7 @@ with problem('does_not_end_with_a'):
         no_match('bbba')
         no_match('ababa')
 
+
 with problem('contains_three_as'):
     @test()
     def _():
@@ -121,3 +121,56 @@ with problem('contains_three_as'):
         no_match('a')
         no_match('aa')
         no_match('axa')
+
+
+with problem('three_letters'):
+    @test()
+    def _():
+        match('aaa')
+        match('AAA')
+        match('abc')
+        match('xyz')
+        match('AoJ')
+
+        no_match('')
+        no_match('a')
+        no_match('ap')
+        no_match('apFK')
+        no_match('123')
+
+
+with problem('three_digits'):
+    @test()
+    def _():
+        match('000')
+        match('123')
+        match('497')
+        match('568')
+
+        no_match('')
+        no_match('1')
+        no_match('12')
+        no_match('1234')
+        no_match('aaa')
+        no_match('41p')
+
+
+with problem('is_dna'):
+    @test()
+    def _():
+        match('')
+        match('G')
+        match('A')
+        match('T')
+        match('C')
+        match('CGAT')
+        match('GCCTATAGTAGACG')
+        match('CCCCGGGGAAAATTTT')
+
+        no_match('a')
+        no_match('g')
+        no_match('c')
+        no_match('t')
+        no_match('q')
+        no_match('Q')
+        no_match('PGATCCCC')
