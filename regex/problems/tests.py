@@ -1,8 +1,7 @@
 from contextlib import contextmanager
 from scripting.testing import test
-from scripting.tested import active_tested_implementation_from_id, current_active_tested_implementation
+from scripting.tested import active_tested_implementation_from_id, current_active_tested_implementation, current_active_tested_implementation_id
 from scripting.assertions import assert_truthy, assert_falsey
-import re
 
 
 
@@ -13,7 +12,8 @@ def problem(id):
 
 def match(string):
     f = current_active_tested_implementation()
-    assert_truthy(f(string), message=f"'{string}' should match regex")
+    id = current_active_tested_implementation_id()
+    assert_truthy(f(string), message=f"{id}: '{string}' should match regex")
 
 def no_match(string):
     f = current_active_tested_implementation()
@@ -174,3 +174,21 @@ with problem('is_dna'):
         no_match('q')
         no_match('Q')
         no_match('PGATCCCC')
+
+
+with problem('thrice_repeated'):
+    @test()
+    def _():
+        # match('aaa')
+        match('xxx')
+        match('ababab')
+        match('xyzxyzxyz')
+        match('aaaaaaaaa')
+        match('123456789123456789123456789')
+
+        no_match('')
+        no_match('a')
+        no_match('aa')
+        no_match('aab')
+        no_match('aaab')
+        no_match('xyzxyzxy')

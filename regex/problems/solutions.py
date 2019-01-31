@@ -33,3 +33,6 @@ def three_digits(string):
 
 def is_dna(string):
     return re.fullmatch(r'[ACGT]*', string)
+
+def thrice_repeated(string):
+    return re.fullmatch(r'(.+)\1\1', string)
