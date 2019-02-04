@@ -20,31 +20,30 @@ have support for them.
 * JavaScript: regexes built into the language.
 * C#: the [`Regex`](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex) class.
 
-# Regular Expressions in Python
+## Regular Expressions in Python
 
 In Python, regular expression functionality is provided through the [`re` module](https://docs.python.org/3/library/re.html). This module consists of many functions,
 each one corresponding to a specific use of regular expressions. For now, we focus on simply checking
 if a string matches a pattern.
 
 The function `re.fullmatch(regex, string)` does exactly that: it determines whether
-`string` satisfies the pattern described by `regex`. The only question that remains is, what does
+`string` satisfies the pattern described by `regex`. If it does, `fullmatch` returns
+a truthy value, otherwise a falsey one. The only question that remains is, what does
 this regex minilanguage look like? What form should `regex` take?
 
 Let us start with a very simple pattern: we want to check whether `string`
-consists of exactly one character, namely `a`.
+consists of exactly one character, namely `a`. The regex expressing this pattern is
+simply `a`.
 
-
-# Assignment
-
-Write a function `equals_a(string)` that checks if `string` equals
-the `'a'`.
-
-You could of course write
+In order to check if some string `string` matches a pattern described by `a`, we rely
+on `fullmatch`:
 
 ```python
-def equals_a(string):
-    return string == 'a'
+if re.fullmatch('a', string):
+    # string does indeed match the pattern 'a'
 ```
 
-This is by far the most straightforward and efficient solution. However,
-our intention is to start using regular expressions.
+## Assignment
+
+Write a function `equals_a(string)` that checks if `string` equals
+the `'a'` making use of regular expressions.
