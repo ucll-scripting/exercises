@@ -9,14 +9,12 @@ with regex_test('thrice_repeated') as (match, no_match):
     def _():
         match('aaa')
         match('xxx')
-        match('ababab')
-        match('xyzxyzxyz')
-        match('aaaaaaaaa')
-        match('123456789123456789123456789')
+        match('111')
+        match('...')
 
         no_match('')
         no_match('a')
         no_match('aa')
         no_match('aab')
-        no_match('aaab')
-        no_match('xyzxyzxy')
+        no_match('aaax')
+        no_match('xaaa')

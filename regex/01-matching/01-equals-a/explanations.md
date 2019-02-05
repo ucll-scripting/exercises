@@ -3,8 +3,8 @@
 Consider the following functions:
 
 * `is_valid_time(string)` whichs check if `string` has the form `hh:mm:ss`.
-* `is_valid_email_address(string)` whichs check if `string` has the form `fname.lname@subdomain.domain`.
 * `is_valid_student_id(string)` which checks if `string` has the forn `rNNNNNNN` where each `N` is a digit.
+* `is_valid_email_address(string)` whichs check if `string` has the form `fname.lname@subdomain.domain`.
 
 Each of these performs the same job: check if the given string satisfies a certain pattern.
 This kind of functionality occurs often (e.g. user input validation). While it is certainly
@@ -26,7 +26,7 @@ In Python, regular expression functionality is provided through the [`re` module
 each one corresponding to a specific use of regular expressions. For now, we focus on simply checking
 if a string matches a pattern.
 
-The function `re.fullmatch(regex, string)` does exactly that: it determines whether
+The function `re.fullmatchegex, string)` does exactly that: it determines whether
 `string` satisfies the pattern described by `regex`. If it does, `fullmatch` returns
 a truthy value, otherwise a falsey one. The only question that remains is, what does
 this regex minilanguage look like? What form should `regex` take?
