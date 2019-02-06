@@ -5,6 +5,6 @@ from scripting.reference import active_reference_implementation_from_id, referen
 
 
 with reference_file('solutions.py'):
-    with reference_based_test('abs') as testcase:
+    with reference_based_test('sign') as testcase:
         for x in [ 0, 1, 2, -5, -8 ]:
             testcase(x)
