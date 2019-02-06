@@ -5,6 +5,6 @@ from scripting.reference import active_reference_implementation_from_id, referen
 
 
 with reference_file('solutions.py'):
-    with reference_based_test('count_divisors') as testcase:
-        for x in [ 5, 10, 12, 2 * 2 * 3 * 5 * 7 ]:
+    with reference_based_test('is_prime') as testcase:
+        for x in range(1, 100):
             testcase(x)
