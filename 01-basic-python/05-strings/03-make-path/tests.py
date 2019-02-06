@@ -5,8 +5,9 @@ from scripting.reference import active_reference_implementation_from_id, referen
 
 
 with reference_file('solutions.py'):
-    with reference_based_test('swap_all') as testcase:
+    with reference_based_test('make_path') as testcase:
         testcase([])
-        testcase([('a', 'b')])
-        testcase([('a', 'b'), (1, 2)])
-        testcase([('a', 'b'), (1, 2), (2, 1)])
+        testcase(['a'])
+        testcase(['a', 'b'])
+        testcase(['a', 'b', 'c'])
+        testcase(['abc', '123', 'xyz'])

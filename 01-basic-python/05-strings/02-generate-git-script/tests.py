@@ -5,8 +5,7 @@ from scripting.reference import active_reference_implementation_from_id, referen
 
 
 with reference_file('solutions.py'):
-    with reference_based_test('format_grades') as testcase:
-        testcase([])
-        testcase([('John', 14)])
-        testcase([('John', 12), ('Ann', 15)])
-        testcase([('John', 12), ('Ann', 15), ('Steven', 8)])
+    with reference_based_test('generate_git_script') as testcase:
+        testcase('a')
+        testcase('b')
+        testcase('xyz')
