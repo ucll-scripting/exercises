@@ -8,9 +8,10 @@ with regex_test('thrice_repeated') as (match, no_match):
     @test()
     def _():
         match('aaa')
-        match('xxx')
         match('111')
         match('...')
+        match('121212')
+        match('xyzxyzxyz')
 
         no_match('')
         no_match('a')
@@ -18,3 +19,6 @@ with regex_test('thrice_repeated') as (match, no_match):
         no_match('aab')
         no_match('aaax')
         no_match('xaaa')
+        no_match('x123123123')
+        no_match('aaax')
+        no_match('f111')

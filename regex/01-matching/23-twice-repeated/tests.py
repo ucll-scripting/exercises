@@ -4,7 +4,7 @@ from scripting.quick import regex_test
 from scripting.assertions import assert_truthy, assert_falsey
 
 
-with regex_test('thrice_repeated') as (match, no_match):
+with regex_test('twice_repeated') as (match, no_match):
     @test()
     def _():
         match('aa')
