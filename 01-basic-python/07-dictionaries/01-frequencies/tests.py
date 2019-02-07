@@ -5,11 +5,12 @@ from scripting.reference import active_reference_implementation_from_id, referen
 
 
 with reference_file('solutions.py'):
-    with reference_based_test('contains_duplicates') as testcase:
+    with reference_based_test('frequencies') as testcase:
         testcase([])
         testcase([1])
+        testcase([2])
+        testcase([1, 2])
         testcase([1, 1])
-        testcase([1, 2, 1])
-        testcase([3, 1, 2, 1])
-        testcase([3, 6, 2, 1])
-        testcase([3, 6, 2, 1, 6])
+        testcase([1, 1, 2])
+        testcase([1, 1, 2, 2, 2])
+        testcase(['a', 'b', 'c'])
