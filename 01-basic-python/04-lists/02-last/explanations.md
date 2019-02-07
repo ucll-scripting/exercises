@@ -1,7 +1,7 @@
 # Assignment
 
 What would happen if you indexate a list with a negative index?
-Java would throw its hands up in exasperation and throw an exception at you.
+Java would raise its hands in exasperation and throw an exception at you.
 JavaScript would probably do something completely unexpected.
 But what would Python do?
 
