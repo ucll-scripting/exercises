@@ -16,4 +16,51 @@ Is there a way to add this extra parameter without causing so much trouble?
 
 Perhaps you think overloading might be the solution: have two definitions for `drop_last`, one with a single parameter, one with two parameters. However, overloading is not possible in Python (cake point for the first one who can give a reasoned argument why.)
 
-Python offers a better solution: *default parameter values*. For each parameter of a function, you can specify a default value. If the caller omits this parameter, it will automatically be assigned the associated default value.
+## Default Parameter Values
+
+Python offers a better solution: *default parameter values*. For each parameter of a function, you can specify a default value. If the caller omits this parameter, it will automatically be assigned the associated default value. For example:
+
+```python
+def foo(x, y=4):
+    return (x, y)
+
+>>> foo(1, 2)
+(1, 2)
+
+>>> foo(1)
+(1, 4)
+
+>>> foo()
+# Error! x is not optional
+```
+
+## Keyword Arguments
+
+Say you have the function
+
+```python
+def foo(x=1, y=2, z=3):
+    return (x, y, z)
+```
+
+What if you want to call it with `y` set to 7. You can't use `foo(7)`, because Python will think that you mean to assign `7` to `x`. It seems that the only option is to specify a value for `x` anyway, which means you have to look up what its value should be and then call the function using `foo(1, 7)`.
+
+Luckily, Python supports *keyword arguments* (also called *named arguments*):
+when calling a function, you can explicitly tell which parameter is given which value. For example:
+
+```python
+foo(y=7)
+```
+
+is valid and means "call `foo` with parameter `y` set to `7`." Since all other
+parameters have default values, Python won't make a fuss and the result of this call is `(1, 7, 3)`.
+
+This syntax allows you to specify parameter values in any order you want:
+
+```python
+def foo(x, y, z):
+    return (x, y, z)
+
+>>> foo(z=3, x=1, y=5)
+(1, 5, 3)
+```
