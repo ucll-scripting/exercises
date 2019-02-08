@@ -14,3 +14,4 @@ with reference_file('solutions.py'):
         testcase([5, 2, 5])
         testcase([1, 2, 1, 3, 3, 3])
         testcase([6, 2, 6, 3, 6, 3])
+        testcase([1] * 50000 + [2] * 49999)

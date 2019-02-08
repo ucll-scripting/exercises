@@ -13,6 +13,5 @@ with reference_file('solutions.py'):
         testcase([2, 1])
         testcase([1, 2, 3])
         testcase([1, 3, 6, 8])
-        testcase([3, 3, 6, 8, 8, 8])
         testcase([1, 3, 6, 8, 2])
         testcase([1, 4, 7, 5, 8])

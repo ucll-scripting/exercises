@@ -8,7 +8,7 @@ For example,
 ```
 
 Given this information you need to construct a string containing the end results per student. The end result for a student
-equals the rounded average of his or her grades. This gives:
+equals the *rounded* average of his or her grades. This gives:
 
 ```python
 John: 10

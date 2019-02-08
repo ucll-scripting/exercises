@@ -6,7 +6,6 @@ from scripting.reference import active_reference_implementation_from_id, referen
 
 with reference_file('solutions.py'):
     with reference_based_test('greatest_sum') as testcase:
-        testcase([])
         testcase([1])
         testcase([1, 2])
         testcase([1, 2, 3])
