@@ -57,25 +57,25 @@ This will run all tests in the current directory and all subdirectories. General
 
 ## Other Useful Shell Commands
 
-### Entering a subdirectory
+Entering a subdirectory
 
 ```bash
 $ cd subdirectory
 ```
 
-### Go up a directory
+Go up a directory
 
 ```bash
 $ cd ..
 ```
 
-### View contents of current directory
+View contents of current directory
 
 ```bash
 $ ls
 ```
 
-### Open a file from the shell
+Open a file from the shell
 
 ```bash
 $ code filename
