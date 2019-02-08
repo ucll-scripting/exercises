@@ -1,2 +1,6 @@
 def includes(xs, ys):
-    return all(y in xs for y in ys)
+    for y in ys:
+        if y not in xs:
+            return False
+
+    return True
