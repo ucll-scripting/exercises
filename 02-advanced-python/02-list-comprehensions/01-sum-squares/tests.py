@@ -5,8 +5,9 @@ from scripting.reference import active_reference_implementation_from_id, referen
 
 
 with reference_file('solutions.py'):
-    with reference_based_test('format_grades') as testcase:
+    with reference_based_test('sum_squares') as testcase:
         testcase([])
-        testcase([('John', 14)])
-        testcase([('John', 12), ('Ann', 15)])
-        testcase([('John', 12), ('Ann', 15), ('Steven', 8)])
+        testcase([1])
+        testcase([2])
+        testcase([1, 2])
+        testcase([4, 6, 2, 7, 6])
