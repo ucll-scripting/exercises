@@ -26,7 +26,7 @@ In Python, regular expression functionality is provided through the [`re` module
 each one corresponding to a specific use of regular expressions. For now, we focus on simply checking
 if a string matches a pattern.
 
-The function `re.fullmatchegex, string)` does exactly that: it determines whether
+The function `re.fullmatch(regex, string)` does exactly that: it determines whether
 `string` satisfies the pattern described by `regex`. If it does, `fullmatch` returns
 a truthy value, otherwise a falsey one. The only question that remains is, what does
 this regex minilanguage look like? What form should `regex` take?
