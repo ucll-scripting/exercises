@@ -4,23 +4,16 @@ import re
 import os
 
 
-def line_count(filename):
-    with open(filename, 'r') as file:
-        return len(file.readlines())
+def line_count(data):
+    return len(data.splitlines())
 
 
-def word_count(filename):
-    with open(filename, 'r') as file:
-        return len(re.split(r'\s+', file.read()))
+def word_count(data):
+    return len(re.split(r'\s+', data))
 
 
-def byte_count(filename):
-    return os.path.getsize(filename)
-
-
-def char_count(filename):
-    with open(filename, 'r') as file:
-        return len(file.read())
+def char_count(data):
+    return len(data)
 
 
 def print_table(table):
@@ -46,20 +39,25 @@ def print_table(table):
 def create_parser():
     parser = argparse.ArgumentParser(prog='wc')
 
-    parser.add_argument('files', help='print line count', nargs='+')
+    parser.add_argument('files', help='print line count', nargs='*')
     parser.add_argument('-l', '--lines', help='print line count', dest='counters', action='append_const', const=line_count)
-    parser.add_argument('-c', '--bytes', help='print byte counts', dest='counters', action='append_const', const=byte_count)
     parser.add_argument('-m', '--chars', help='print character counts', dest='counters', action='append_const', const=char_count)
     parser.add_argument('-w', '--words', help='print word counts', dest='counters', action='append_const', const=word_count)
 
     return parser
 
 
-def collect_data(files, counters):
-    def process_file(file):
-        return (*( counter(file) for counter in counters ), file)
+def collect_data(filenames, counters):
+    if filenames:
+        def process_file(filename):
+            with open(filename) as file:
+                file_contents = file.read()
+                return (*( counter(file_contents) for counter in counters ), filename)
 
-    return [ process_file(f) for f in files ]
+        return [ process_file(filename) for filename in filenames ]
+    else:
+        data = sys.stdin.read()
+        return [ tuple([ counter(data) for counter in counters ]) ]
 
 
 def add_total_row(table):
@@ -77,7 +75,7 @@ def main():
     args = create_parser().parse_args()
 
     # If no counters were specified, use defaults
-    counters = args.counters or [ line_count, word_count, byte_count ]
+    counters = args.counters or [ line_count, word_count, char_count ]
     files = args.files
 
     # Collect counts for each file
