@@ -5,14 +5,13 @@ from scripting.reference import active_reference_implementation_from_id, referen
 
 
 with reference_file('solutions.py'):
-    with reference_based_test('longest_string') as testcase:
-        testcase([ '' ])
-        testcase([ 'a' ])
-        testcase([ 'a', '' ])
-        testcase([ '', 'a' ])
-        testcase([ 'a', 'b' ])
-        testcase([ 'a', 'bb' ])
-        testcase([ 'aa', 'b' ])
-        testcase([ 'aaa', 'bbbb', 'cc', 'd' ])
-        testcase([ 'aaa', 'bbbb', 'cc', 'ddddd' ])
-        testcase([ 'aaa', 'bbbb', 'cccccccc', 'ddddd' ])
+    with reference_based_test('drop_last') as testcase:
+        testcase([ 1 ])
+        testcase([ 1, 2 ])
+        testcase([ 1, 2 ], n=2)
+        testcase([ 2, 1 ])
+        testcase([ 2, 1 ], n=2)
+        testcase([ 4, 6, 1, 3, 2 ])
+        testcase([ 4, 6, 1, 3, 2 ], n=2)
+        testcase([ 4, 6, 1, 3, 2 ], n=3)
+        testcase([ 4, 6, 1, 3, 2 ], n=4)
