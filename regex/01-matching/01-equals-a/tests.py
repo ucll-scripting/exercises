@@ -5,10 +5,8 @@ from scripting.assertions import assert_truthy, assert_falsey
 
 
 with regex_test('equals_a') as (match, no_match):
-    @test()
-    def _():
-        match('a')
+    match('a')
 
-        no_match('b')
-        no_match('')
-        no_match('aa')
+    no_match('b')
+    no_match('')
+    no_match('aa')

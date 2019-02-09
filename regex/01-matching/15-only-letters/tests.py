@@ -5,13 +5,11 @@ from scripting.assertions import assert_truthy, assert_falsey
 
 
 with regex_test('only_letters') as (match, no_match):
-    @test()
-    def _():
-        match('')
-        match('a')
-        match('P')
-        match('fPczLO')
+    match('')
+    match('a')
+    match('P')
+    match('fPczLO')
 
-        no_match('7')
-        no_match('d5')
-        no_match('4012f78')
+    no_match('7')
+    no_match('d5')
+    no_match('4012f78')

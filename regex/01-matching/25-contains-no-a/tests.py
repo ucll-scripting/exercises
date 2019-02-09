@@ -5,12 +5,10 @@ from scripting.assertions import assert_truthy, assert_falsey
 
 
 with regex_test('contains_no_a') as (match, no_match):
-    @test()
-    def _():
-        match('')
-        match('x')
-        match('bqopvpod')
+    match('')
+    match('x')
+    match('bqopvpod')
 
-        no_match('a')
-        no_match('xxxaxxxx')
-        no_match('pppa')
+    no_match('a')
+    no_match('xxxaxxxx')
+    no_match('pppa')
