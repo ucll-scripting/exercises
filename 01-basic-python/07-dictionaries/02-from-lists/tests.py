@@ -5,12 +5,9 @@ from scripting.reference import active_reference_implementation_from_id, referen
 
 
 with reference_file('solutions.py'):
-    with reference_based_test('frequencies') as testcase:
-        testcase([])
-        testcase([1])
-        testcase([2])
-        testcase([1, 2])
-        testcase([1, 1])
-        testcase([1, 1, 2])
-        testcase([1, 1, 2, 2, 2])
-        testcase(['a', 'b', 'c'])
+    with reference_based_test('from_lists') as testcase:
+        testcase([], [])
+        testcase(['a'], [1])
+        testcase(['a', 'b'], [1, 2])
+        testcase([1, 2], ['a', 'b'])
+        testcase([False, True], [4, 6])
