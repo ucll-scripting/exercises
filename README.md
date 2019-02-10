@@ -21,7 +21,7 @@ to use all of the functionality Python provides. It is not our
 goal to have you write complex algorithms. So, please
 do not write your own `sum` function, use the built-in one.
 You will see that Python has *a lot* of built-in functions
-for you to make use of. It is therefore important
+for you to make use of. Therefore, it is very important
 that you develop the habit of skimming through the documentation
 and looking up information online.
 
