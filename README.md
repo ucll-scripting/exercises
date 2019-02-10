@@ -30,12 +30,22 @@ and looking up information online.
 Install the following software:
 
 * [git](https://git-scm.com/)
-* [Python](https://www.python.org/downloads/)
+* [Python 3](https://www.python.org/downloads/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-Open a terminal in a directory where you wish to store your files.
-Enter the commands below. **Always omit the `$`!** It is conventional to prefix
-lines with commands you are expected to enter with `$`.
+Make sure to check your Python version as follows (this is especially
+important for Mac and Linux users). Open a terminal and input the following command.
+(**Omit the `$`!** It is conventional to prefix
+lines with commands you are expected to enter with `$`.)
+
+```bash
+$ python --version
+```
+
+This should respond with the installed Python version. You need at least 3.6.
+
+Next, open a terminal in a directory where you wish to store your course-related files.
+Enter the commands below.
 
 ```bash
 $ pip install git+https://github.com/UCLeuvenLimburg/scripting.git
@@ -57,8 +67,8 @@ positional arguments:
 
 optional arguments:
   -h, --help      show this help message and exit
-
 ```
+
 
 ## Usage
 
