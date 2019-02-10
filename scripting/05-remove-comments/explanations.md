@@ -10,5 +10,4 @@ A `#` denotes comments: everything that follows on the same line is considered c
 The `#` itself should also be removed.
 
 To test your implementation, create a couple of files with some random contents
-and let your script loose on it. Make sure all comments are gone
-and that the remainder has been left undisturbed.
+and let your script loose on them.
