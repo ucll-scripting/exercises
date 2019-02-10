@@ -1,5 +1,30 @@
 # Scripting Exercise Repository
 
+## About This Course
+
+This course teaches you how to write small scripts that automate tasks.
+For this, we will rely on the Python programming language:
+
+* It is one of the most used programming languages (see [Tiobe](https://www.tiobe.com/tiobe-index/), [StackOverflow](https://insights.stackoverflow.com/survey/2018#most-popular-technologies), [GitHub](https://octoverse.github.com/projects#languages)).
+* It is one of the most user-friendly languages out there.
+* A very large number of packages are available, which is essential for scripting.
+
+The focus lies on *getting things done*. Your scripts have to produce
+correct results and it is your responsibility to check your work properly.
+The first series of exercises are accompanied by tests,
+but with the 'real deal' exercises, that won't be the case anymore.
+You will have to split up the task at hand in smaller pieces,
+implement helper functions, check them, etc.
+
+We do not care *how* you solve the problem. You are free
+to use all of the functionality Python provides. It is not our
+goal to have you write complex algorithms. So, please
+do not write your own `sum` function, use the built-in one.
+You will see that Python has *a lot* of built-in functions
+for you to make use of. It is therefore important
+that you develop the habit of skimming through the documentation
+and looking up information online.
+
 ## Installation
 
 Install the following software:
@@ -53,7 +78,6 @@ $ scripting test
 ```
 
 This will run all tests in the current directory and all subdirectories. Generally, you will want to perform this command inside an exercise's directory, but run tests of many exercises at once, you can also execute it in a parent directory.
-
 
 ## Other Useful Shell Commands
 
