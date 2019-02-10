@@ -4,7 +4,7 @@ from scripting.quick import reference_based_test
 from scripting.reference import active_reference_implementation_from_id, reference_file
 
 
-with reference_file('solutions.py'):
+with reference_file('solution.py'):
     with reference_based_test('drop_nth') as testcase:
         testcase([1], 0)
         testcase([1, 2], 0)

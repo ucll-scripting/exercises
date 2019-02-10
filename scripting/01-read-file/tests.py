@@ -5,7 +5,7 @@ from scripting.reference import active_reference_implementation_from_id, referen
 import os
 
 
-with reference_file('solutions.py'):
+with reference_file('solution.py'):
     with reference_based_test('read_file') as _testcase:
         def testcase(filename, contents):
             with open(filename, 'w') as file:

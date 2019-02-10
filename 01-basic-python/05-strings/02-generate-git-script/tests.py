@@ -4,7 +4,7 @@ from scripting.quick import reference_based_test
 from scripting.reference import active_reference_implementation_from_id, reference_file
 
 
-with reference_file('solutions.py'):
+with reference_file('solution.py'):
     with reference_based_test('generate_git_script') as testcase:
         testcase('a')
         testcase('b')
