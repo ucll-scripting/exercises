@@ -3,8 +3,7 @@
 Better late than never: your first Pythonic Hello World application.
 Write a *script* `hello-world.py` that, when run on the shell, prints `Hello world`.
 
-Note how we asked for a script, not a function. A script is a file that contains code (in our case, Python code).
-When you run the script, this code gets executed.
+Note how we asked for a script, not a function. A script is a file that contains code (in our case, Python code):
 
 ```python
 # File say-bla.py
@@ -12,7 +11,7 @@ When you run the script, this code gets executed.
 print('bla')
 ```
 
-To run this script, enter the following command in a terminal (*not* a Python shell):
+You can leave the first line out. To run this script, enter the following command in a terminal (*not* a Python shell):
 
 ```bash
 $ python say-bla.py
