@@ -69,7 +69,6 @@ optional arguments:
   -h, --help      show this help message and exit
 ```
 
-
 ## Usage
 
 Use Visual Studio Code to open the `scripting-exercise` folder. Under Windows, this can be done by right-clicking the folder and choose 'Open with Code'. This way, the side bar gives a nicely structured view of all the exercises.
@@ -88,6 +87,40 @@ $ scripting test
 ```
 
 This will run all tests in the current directory and all subdirectories. Generally, you will want to perform this command inside an exercise's directory, but run tests of many exercises at once, you can also execute it in a parent directory.
+
+## Remaining Up-To-Date
+
+Both the `scripting` package and the exercises can be updated
+during the course. It is therefore strongly recommended
+to subscribe to updates.
+
+Open both these pages:
+
+* [`scripting` repository](https://github.com/UCLeuvenLimburg/scripting)
+* [Exercises repository](https://github.com/UCLeuvenLimburg/scripting-exercises)
+
+Press the Watch dropdown button (upper right corner)
+and select 'Releases only'.
+
+### Updating the `scripting` package
+
+Enter the following command in a terminal:
+
+```bash
+$ pip install --upgrade git+https://github.com/UCLeuvenLimburg/scripting.git
+```
+
+(At the moment of writing this is yet untested. If it does not work, inform a lecturer.)
+
+### Updating the exercises
+
+Open a terminal inside your local copy of the exercises (any subdirectory will do)
+and enter the following command:
+
+```bash
+$ git pull
+```
+
 
 ## Other Useful Shell Commands
 
