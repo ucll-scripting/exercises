@@ -30,7 +30,7 @@ and looking up information online.
 Install the following software:
 
 * [git](https://git-scm.com/)
-* [Python 3](https://www.python.org/downloads/): during the installation, don't forget to have Python added to the path
+* [Python 3](https://www.python.org/downloads/): during the installation, don't forget to have Python added to environment variables
 * [Visual Studio Code](https://code.visualstudio.com/): during the installation, have it install the explorer context menu additions
 
 
