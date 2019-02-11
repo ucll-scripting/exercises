@@ -27,12 +27,15 @@ and looking up information online.
 
 ## Installation
 
+### Software
+
 Install the following software:
 
-* [git](https://git-scm.com/)
-* [Python 3](https://www.python.org/downloads/): during the installation, don't forget to have Python added to environment variables
-* [Visual Studio Code](https://code.visualstudio.com/): during the installation, have it install the explorer context menu additions
-
+* [Git](https://git-scm.com/)
+* [Python 3](https://www.python.org/downloads/)
+  * During the installation, don't forget to have Python added to environment variables
+* [Visual Studio Code](https://code.visualstudio.com/)
+  * Windows users: during the installation, have it install the explorer context menu additions
 
 Make sure to check your Python version as follows (this is especially
 important for Mac and Linux users). Open a terminal and input the following command.
@@ -44,12 +47,27 @@ $ python --version
 ```
 
 This should respond with the installed Python version. You need at least 3.6.
+If it responds with some 2.x version, you're probably a Mac user. Try again with
+
+```bash
+$ python3 --version
+```
+
+If you get an error or the wrong version, inform a lecturer.
 
 Next, open a terminal in a directory where you wish to store your course-related files.
 Enter the commands below.
 
+**Windows Users**
 ```bash
 $ pip install git+https://github.com/UCLeuvenLimburg/scripting.git
+
+$ git clone https://github.com/UCLeuvenLimburg/scripting-exercises.git
+```
+
+**Mac Users**
+```bash
+$ pip3 install git+https://github.com/UCLeuvenLimburg/scripting.git
 
 $ git clone https://github.com/UCLeuvenLimburg/scripting-exercises.git
 ```
