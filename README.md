@@ -30,8 +30,9 @@ and looking up information online.
 Install the following software:
 
 * [git](https://git-scm.com/)
-* [Python 3](https://www.python.org/downloads/)
-* [Visual Studio Code](https://code.visualstudio.com/)
+* [Python 3](https://www.python.org/downloads/): during the installation, don't forget to have Python added to the path
+* [Visual Studio Code](https://code.visualstudio.com/): during the installation, have it install the explorer context menu additions
+
 
 Make sure to check your Python version as follows (this is especially
 important for Mac and Linux users). Open a terminal and input the following command.
