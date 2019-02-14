@@ -15,7 +15,7 @@ where all four occurrence of `id` are replaced by the argument.
 ## Multiline strings
 
 The exercise expects you to produce a multiline string. While it is certainly
-doable put everything into a long string using `\n` to separate lines,
+doable to put everything into a long string using `\n` to separate lines,
 this approach is unacceptably prone to errors. Instead,
 we insist on having the ability to drop the string as-is
 directly into our code with minimal modifications.
