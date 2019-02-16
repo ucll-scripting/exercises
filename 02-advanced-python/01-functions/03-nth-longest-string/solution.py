@@ -1,2 +1,2 @@
-def longest_string(strings):
-    return max(strings, key=len)
+def nth_longest_string(n, strings):
+    return sorted(strings, key=len)[-n]

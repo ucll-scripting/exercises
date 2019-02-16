@@ -1,6 +1,6 @@
 # Assignment
 
-Write a function `nth_longest_string(strings)` that returns the `n`th longest string.
+Write a function `nth_longest_string(n, strings)` that returns the `n`th longest string.
 
 You could of course repeatedly find the longest string and remove that.
 A more straightforward way would be to first sort the list according to string length
