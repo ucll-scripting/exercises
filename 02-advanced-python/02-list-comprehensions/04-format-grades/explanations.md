@@ -12,7 +12,7 @@ equals the *rounded* average of his or her grades. This gives:
 
 ```python
 John: 10
-Ann: 11
+Ann: 13
 Nick: 18
 ```
 
