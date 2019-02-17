@@ -55,6 +55,8 @@ $ python3 --version
 
 If you get an error or the wrong version, inform a lecturer.
 
+### Course Related Material
+
 Next, open a terminal in a directory where you wish to store your course-related files.
 Enter the commands below.
 
@@ -75,7 +77,7 @@ $ git clone https://github.com/UCLeuvenLimburg/scripting-exercises.git
 Test the installation of the scripting package by executing the following command.
 It should show the output below (or something similar to it, as long as it's not an error message.)
 
-```
+```bash
 $ scripting
 usage: scripting [-h] {version,test} ...
 
@@ -121,15 +123,20 @@ Open both these pages:
 Press the Watch dropdown button (upper right corner)
 and select 'Releases only'.
 
+Whenever you are notified of a new release, you can retrieve
+it by entering the command below somewhere inside the repository:
+
+```bash
+$ git pull
+```
+
 ### Updating the `scripting` package
 
-Enter the following command in a terminal:
+Enter the following command in a terminal (`pip3` for Mac users):
 
 ```bash
 $ pip install --upgrade git+https://github.com/UCLeuvenLimburg/scripting.git
 ```
-
-(At the moment of writing this is yet untested. If it does not work, inform a lecturer.)
 
 ### Updating the exercises
 
