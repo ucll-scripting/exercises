@@ -47,7 +47,7 @@ Or you can rely on `itemgetter`:
 ```python
 from operator import itemgetter
 
-oldest = max(people, key=itemgetter('age))
+oldest = max(people, key=itemgetter('age'))
 tallest = max(people, key=itemgetter('height'))
 heaviest = max(people, key=itemgetter('weight'))
 ```
