@@ -1,7 +1,7 @@
 # Assignment
 
 Write a function `twice_repeated(string)` that checks if `string`
-consists of three repetitions of the same character, e.g., `aaa`, `555` of `...`.
+consists of two repetitions of the same character, e.g., `aaa`, `555` of `...`.
 
 ## Backreferences
 
