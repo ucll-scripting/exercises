@@ -39,6 +39,6 @@ requires the *entire* string to be described. In other words, `re.fullmatch('a',
 In the other languages, however, matching the regex `a` with the string `bab` will succeed since the regex will be interpreted as "There is a substring of `bab` that matches the regex `a`." It is important you are aware of this distinction to avoid unpleasant surprises in the future.
 
 Now, is there a way to make Python behave like the other languages? There sure is!
-Simply use `re.search` instead of `re.fullmatch`. In essence, `re.search(egex, string)` is the same as `re.fullmatch('.*regex.*', string)`.
+Simply use `re.search` instead of `re.fullmatch`. In essence, `re.search(regex, string)` is the same as `re.fullmatch('.*regex.*', string)`.
 
 Make use of `re.search` to solve this exercise.
