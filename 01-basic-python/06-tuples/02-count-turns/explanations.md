@@ -33,3 +33,5 @@ Make use of `zip` knowing that it can take an arbitrary number of arguments.
 
 Also, Python is one of the few languages where you can chain comparison operators:
 `a < b < c` yields `True` if `a` is less than `b` and `b` is less than `c`.
+
+If consecutive numbers are equal, we do not count that as a turn.
