@@ -2,7 +2,7 @@
 
 As discussed before, Python provides the following functions:
 
-* `re.fullmatchegex, string)` expects the entire `string` to match `regex`.
+* `re.fullmatch(regex, string)` expects the entire `string` to match `regex`.
 * `re.search(egex, string)` expects part of `string` to match `regex`.
 
 There is a third function that checks if the *beginning* of `string` matches `regex`.
