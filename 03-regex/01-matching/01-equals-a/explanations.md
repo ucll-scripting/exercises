@@ -2,9 +2,9 @@
 
 Consider the following functions:
 
-* `is_valid_time(string)` whichs check if `string` has the form `hh:mm:ss`.
+* `is_valid_time(string)` which checks if `string` has the form `hh:mm:ss`.
 * `is_valid_student_id(string)` which checks if `string` has the form `rNNNNNNN` where each `N` is a digit.
-* `is_valid_email_address(string)` whichs check if `string` has the form `fname.lname@subdomain.domain`.
+* `is_valid_email_address(string)` which checks if `string` has the form `fname.lname@subdomain.domain`.
 
 Each of these performs the same job: check if the given string satisfies a certain pattern.
 This kind of functionality occurs often (e.g. user input validation). While it is certainly
