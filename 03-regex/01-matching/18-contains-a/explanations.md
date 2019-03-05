@@ -3,7 +3,7 @@
 Write a function `contains_a(string)` that checks whether `string` contains an `a`.
 You can achieve using the regex `.*a.*`. However, let's do it a bit differently.
 
-Until now, you've always used the `re.fullmatchegex, string)` function. This function
+Until now, you've always used the `re.fullmatch(regex, string)` function. This function
 demands that the *entire* string satisfies the pattern described by `regex`.
 In general, however, this is not how regexes behave.
 
