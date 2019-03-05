@@ -17,3 +17,7 @@ def mode(ns):
     fs = frequencies(ns)
 
     return max(fs.items(), key=second)[0]
+
+# Alternative using lambda's
+def mode2(ns):
+    return max(frequencies(ns), key=lambda pair: pair[1])[0]
