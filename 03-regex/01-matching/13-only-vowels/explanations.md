@@ -4,5 +4,5 @@ Write a function `only_vowels(string)` that checks whether `string` contains onl
 For this, you'll need to combine the following regex ingredients:
 
 * The alternation operator `|`.
-* The grouping parenthesis `()`.
+* The grouping parentheses `()`.
 * The Kleene star `*`.
