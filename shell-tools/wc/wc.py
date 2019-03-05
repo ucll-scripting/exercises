@@ -39,7 +39,7 @@ def print_table(table):
 def create_parser():
     parser = argparse.ArgumentParser(prog='wc')
 
-    parser.add_argument('files', help='print line count', nargs='*')
+    parser.add_argument('files', help='files', nargs='*')
     parser.add_argument('-l', '--lines', help='print line count', dest='counters', action='append_const', const=line_count)
     parser.add_argument('-m', '--chars', help='print character counts', dest='counters', action='append_const', const=char_count)
     parser.add_argument('-w', '--words', help='print word counts', dest='counters', action='append_const', const=word_count)
