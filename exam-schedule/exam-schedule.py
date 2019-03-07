@@ -54,8 +54,13 @@ def _lecturers_command(args):
             for triple in zip(ids, fnames, lnames):
                 data.add( triple )
 
-        for triple in sorted(list(data)):
-            print(triple)
+        for id, fname, lname in sorted(list(data)):
+            s = args.format
+            s = re.sub('%id', id, s)
+            s = re.sub('%fname', fname, s)
+            s = re.sub('%lname', lname, s)
+            print(s)
+
 
 
 def _schedule_command(args):
@@ -156,6 +161,7 @@ def process_command_line_arguments():
 
     # Command 'lecturers'
     lecturers_parser = subparsers.add_parser('lecturers', help='lists all lecturers')
+    lecturers_parser.add_argument('--format', help='format string', default='%id %fname %lname')
     lecturers_parser.set_defaults(func=_lecturers_command)
 
     # Command 'schedule'
