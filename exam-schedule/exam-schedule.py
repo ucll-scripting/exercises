@@ -42,6 +42,22 @@ def _students_command(args):
             print(id)
 
 
+def _lecturers_command(args):
+    with open_csv(args.filename) as reader:
+        data = set()
+
+        for row in reader:
+            ids = row['Lector'].split('/')
+            fnames = row['Lector Voornaam'].split('/')
+            lnames = row['Lector Naam'].split('/')
+
+            for triple in zip(ids, fnames, lnames):
+                data.add( triple )
+
+        for triple in sorted(list(data)):
+            print(triple)
+
+
 def _schedule_command(args):
     with open_csv(args.filename) as reader:
         relevant_rows = []
@@ -137,6 +153,10 @@ def process_command_line_arguments():
     # Command 'students'
     students_parser = subparsers.add_parser('students', help='lists all students')
     students_parser.set_defaults(func=_students_command)
+
+    # Command 'lecturers'
+    lecturers_parser = subparsers.add_parser('lecturers', help='lists all lecturers')
+    lecturers_parser.set_defaults(func=_lecturers_command)
 
     # Command 'schedule'
     schedule_parser = subparsers.add_parser('schedule', help='shows exam schedule of specific student')
