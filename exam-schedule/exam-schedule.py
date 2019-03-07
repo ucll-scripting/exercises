@@ -1,8 +1,19 @@
+#!/usr/bin/env python
+
+from contextlib import contextmanager
 import argparse
 import datetime
 import sys
 import csv
 import re
+
+
+
+@contextmanager
+def open_csv(filename):
+    with open(filename, 'r') as file:
+        reader = csv.DictReader(file)
+        yield reader
 
 
 def _row_date(row):
@@ -20,9 +31,19 @@ def _format_row(row, format_string):
     return format_string
 
 
-def _student_command(args):
-    with open(args.filename) as file:
-        reader = csv.DictReader(file)
+def _students_command(args):
+    with open_csv(args.filename) as reader:
+        ids = set()
+
+        for row in reader:
+            ids.add(row['Student ID'])
+
+        for id in sorted(list(ids)):
+            print(id)
+
+
+def _schedule_command(args):
+    with open_csv(args.filename) as reader:
         relevant_rows = []
 
         for row in reader:
@@ -36,8 +57,7 @@ def _student_command(args):
 
 
 def _lecturer_command(args):
-    with open(args.filename) as file:
-        reader = csv.DictReader(file)
+    with open_csv(args.filename) as reader:
         relevant_rows = []
 
         for row in reader:
@@ -51,8 +71,7 @@ def _lecturer_command(args):
 
 
 def _course_command(args):
-    with open(args.filename) as file:
-        reader = csv.DictReader(file)
+    with open_csv(args.filename) as reader:
         relevant_rows = []
 
         for row in reader:
@@ -68,8 +87,7 @@ def _course_command(args):
 def _exam_counts_command(args):
     exam_counts = {}
 
-    with open(args.filename) as file:
-        reader = csv.DictReader(file)
+    with open_csv(args.filename) as reader:
 
         for row in reader:
             student_id = row['Student ID']
@@ -116,11 +134,15 @@ def process_command_line_arguments():
     parser.set_defaults(func=lambda args: parser.print_help())
     subparsers = parser.add_subparsers(help='sub-command help')
 
-    # Command 'student'
-    student_parser = subparsers.add_parser('student', help='shows exams of student')
-    student_parser.add_argument('id', help='student id')
-    student_parser.add_argument('--format', help='format string', default='%d %c')
-    student_parser.set_defaults(func=_student_command)
+    # Command 'students'
+    students_parser = subparsers.add_parser('students', help='lists all students')
+    students_parser.set_defaults(func=_students_command)
+
+    # Command 'schedule'
+    schedule_parser = subparsers.add_parser('schedule', help='shows exam schedule of specific student')
+    schedule_parser.add_argument('id', help='student id')
+    schedule_parser.add_argument('--format', help='format string', default='%d %c')
+    schedule_parser.set_defaults(func=_schedule_command)
 
     # Command 'lecturer'
     lecturer_parser = subparsers.add_parser('lecturer', help='shows exams of lecturer')
