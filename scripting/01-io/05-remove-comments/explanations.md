@@ -23,7 +23,7 @@ by one application cannot be used by another application.
 
 When an application wants access to a certain file,
 it must ask the OS for permission. If the OS determines the file is available for use,
-i.e. not claimed by another application, the application receives exclusive access
+i.e., not claimed by another application, the application receives exclusive access
 to the file. This 'requesting access' is referred to as *opening a file*, hence
 the name `open` in Python.
 
