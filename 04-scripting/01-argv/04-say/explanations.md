@@ -22,8 +22,8 @@ print(sys.argv)
 $ python say.py a b c d
 ```
 
-In a way, scripts can be seen as functions: the can receive parameters and
-perform certain tasks. Technically, they have return values,
+In a way, scripts can be seen as functions: they can receive parameters and
+perform tasks. Technically, they have return values,
 but this is limited to a single integer, the exit code.
 In practice, if you need to return something from a script,
 this is done by printing out strings or writing data to file.
