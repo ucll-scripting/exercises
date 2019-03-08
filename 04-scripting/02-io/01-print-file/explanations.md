@@ -8,3 +8,9 @@ reads the contents of the file named `filename` and prints it.
 You'll have to [look online](http://lmgtfy.com/?q=python+read+file+to+string) for
 how to do this. It's strongly recommended you find a piece of code that
 relies on the `with` construct.
+
+The script should be used as follows:
+
+```bash
+$ python print-file.py FILE
+```
