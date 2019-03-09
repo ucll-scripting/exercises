@@ -36,6 +36,7 @@ Install the following software:
   * During the installation, don't forget to have Python added to environment variables
 * [Visual Studio Code](https://code.visualstudio.com/)
   * Windows users: during the installation, have it install the explorer context menu additions
+  * Install the VSCode Markdown Preview Mermaid extension.
 
 Make sure to check your Python version as follows (this is especially
 important for Mac and Linux users). Open a terminal and input the following command.
