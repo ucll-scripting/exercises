@@ -1,5 +1,7 @@
 # Assignment
 
+**Note:** Install the VSCode Markdown Preview Mermaid Support extension to view the diagrams below.
+
 Say you have written the following four scripts.
 
 The first, `transactions.py`, contacts your bank and fetches all transactions made in the last year.
@@ -80,8 +82,6 @@ However, this is not very practical:
 It'd be easier if we could somehow chain them together, to be able to tell that
 the first script's output is the second script's input, etc.
 
-(Install the VSCode Markdown Preview Mermaid Support extension to view the diagram below.)
-
 <center>
 
 ```mermaid
@@ -135,9 +135,9 @@ with open(filename, 'w') as output_stream:
 Whenever you start a new process (e.g. when you run a Python script or launch a game),
 it receives three premade streams from the OS, the so-called *standard streams*:
 
-* STDIN or the standard input stream
-* STDOUT or the standard output stream
-* STDERR or the standard error stream
+* STDIN or the standard input stream.
+* STDOUT or the standard output stream. When you print using `print` (or `System.out.println` in Java), this is the stream where your data goes to.
+* STDERR or the standard error stream.
 
 What these streams correspond to, depends on the context.
 If you start a process from the shell, STDIN is connected to the keyboard
@@ -201,7 +201,84 @@ instead of reading their data from a file, they read it from STDIN:
 with open(filename, 'r') as input_stream:
     input_stream.read()
 
-# changes into
+# becomes
 
 sys.stdin.read()
+```
+
+This allows us to chain scripts together:
+
+* `transactions.py` simply prints out the transactions, i.e., to STDOUT.
+* `filter.py` receives its data from STDIN and prints its output to STDOUT.
+* `select.py`: similarly.
+* `sum.py`: similarly.
+
+To attach one script's STDOUT to the next one's STDIN, we can use piping:
+
+```bash
+$ python transactions.py | python filter.py Groceries | python select.py 2 | python sum.py
+```
+
+## Advantages
+
+Instead of having four scripts and pipe them together, we could have
+simply written one script that combines the functionality. However,
+this would make reusing the parts impossible: filtering, selecting
+and summating are operations that can be used in other contexts.
+
+Each script can also be written in a different language.
+Say there is a tool that implements functionality
+that you need, but it's written in, say, Go. There's
+no simple way to call Go functions directly from Python.
+However, by relying on the shell you can have
+to Go program output its result to STDOUT and redirect it to your Python
+script.
+
+The shell also offers you interactivity: you can combine
+your scripts incrementally, checking your results
+at each step. It is important that you do not try
+to build something in one go: check as often as you can.
+
+## Disadvantages
+
+Generally, the shell is used for single-use programs.
+If you need to compute the total amount spent
+on groceries regularly, you will want to
+store your shell command in a file, a *shell script*:
+
+```sh
+# File sum-groceries.sh
+#!/usr/bin/env bash
+
+python transactions.py | python filter.py Groceries | python select.py 2 | python sum.py
+```
+
+However, this will quickly lead you to a path where you start implementing nontrivial
+logic in the shell itself. While programming directly in the shell
+is certainly a possibility (e.g., it does support conditionals and loops),
+we advice against it:
+
+* Most shells have truly *awful* programming languages. Don't be fooled by anyone purporting that "it's not programming, it's scripting, that makes it okay." If you are writing nontrivial logic and bugs are unwelcome, it does not matter whether you call it programming or scripting.
+
+* Scripts written in different languages can communicate because data is encoded as strings. This is actually incredibly inefficient. For example, each time a numeric value needs to be transferred, it must be converted to a string, only to be parsed again into a number. If you remain within the same language, no such translations are necessary.
+
+What's best mostly depends on your actual needs. There are many aspects to take into considerations:
+
+* There are many shells. Not all shells are available on all platforms. Does your script need to be run on other platforms, or only on your own?
+* Some shells do not make use of strings to transfer data. For example, Powershell allows integers, booleans, even entire objects to retain their structure, which makes it a lot more efficient and safer.
+* You can start off with shell scripts and replace them with scripts written in more robust languages if need be.
+
+## Task
+
+Write a script `range.py` that, given two numbers `a` and `b`,
+prints all numbers from `a` to `b`:
+
+```bash
+$ python range.py 5 10
+5
+6
+7
+8
+9
+10
 ```
