@@ -22,11 +22,11 @@ def _row_date(row):
 
 
 def _format_row(row, format_string):
-    format_string = format_string.replace('%d', row['Datum'])
-    format_string = format_string.replace('%c', row['OLA Naam'])
-    format_string = format_string.replace('%l', row['Lokaal'])
-    format_string = format_string.replace('%s', row['Startuur'])
-    format_string = format_string.replace('%i', row['Student ID'])
+    format_string = format_string.replace('%date', row['Datum'])
+    format_string = format_string.replace('%course', row['OLA Naam'])
+    format_string = format_string.replace('%location', row['Lokaal'])
+    format_string = format_string.replace('%start', row['Startuur'])
+    format_string = format_string.replace('%id', row['Student ID'])
 
     return format_string
 
@@ -173,13 +173,13 @@ def process_command_line_arguments():
     # Command 'lecturer'
     lecturer_parser = subparsers.add_parser('lecturer', help='shows exams of lecturer')
     lecturer_parser.add_argument('id', help='lecturer id')
-    lecturer_parser.add_argument('--format', help='format string', default='%d %c')
+    lecturer_parser.add_argument('--format', help='format string', default='%date %course')
     lecturer_parser.set_defaults(func=_lecturer_command)
 
     # Command 'course'
     course_parser = subparsers.add_parser('course', help='shows exams of course')
     course_parser.add_argument('pattern', help='pattern for course name')
-    course_parser.add_argument('--format', help='format string', default='%d %i %l')
+    course_parser.add_argument('--format', help='format string', default='%date %id %location')
     course_parser.set_defaults(func=_course_command)
 
     # Command 'exam-counts'
