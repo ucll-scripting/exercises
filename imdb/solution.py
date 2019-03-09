@@ -6,9 +6,7 @@ import csv
 @contextmanager
 def open_tsv(filename):
     with open(filename, encoding='utf-8') as file:
-        reader = csv.DictReader(file, dialect='excel-tab')
-
-        yield reader
+        yield csv.DictReader(file, dialect='excel-tab')
 
 
 def find_longest():
