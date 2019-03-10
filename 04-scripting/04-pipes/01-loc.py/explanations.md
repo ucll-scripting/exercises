@@ -270,15 +270,12 @@ What's best mostly depends on your actual needs. There are many aspects to take 
 
 ## Task
 
-Write a script `range.py` that, given two numbers `a` and `b`,
-prints all numbers from `a` to `b`:
+Write a script that reads STDIN and counts the number of lines of code.
 
-```bash
-$ python range.py 5 10
-5
-6
-7
-8
-9
-10
-```
+To read from STDIN, you can use `input()`, which returns one line. You can also take a look at `sys.stdin`, as this object offers you more methods,
+which may help you write simpler code.
+
+By default, empty lines (or lines with only whitespace) are ignored. Using the `-e` or `--count-empty-lines` flag leads them to be counted.
+
+The `--comment=STRING` option lets you specify how comments are introduced, e.g., `#` for Python or `//` for Java. When
+specified, lines containing only comments will also be ignored.
