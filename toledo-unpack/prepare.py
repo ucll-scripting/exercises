@@ -3603,8 +3603,8 @@ with ZipFile('package.zip', 'w') as zip:
         d = random.randint(1, 28)
         m = random.randint(1, 12)
         y = random.randint(2000, 2018)
-        text_filename = f'Submission_{qid}_{d}_{m}_{y}.txt'
-        submission_filename = f'Submission_{qid}_{d}_{m}_{y}.js'
+        text_filename = f'Submission_{qid}_{d}-{m}-{y}.txt'
+        submission_filename = f'Submission_{qid}_{d}-{m}-{y}.js'
 
         with zip.open(text_filename, 'w') as f:
             f.write(generate_text_file(qid, name).encode('utf-8'))
