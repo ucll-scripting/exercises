@@ -279,3 +279,23 @@ By default, empty lines (or lines with only whitespace) are ignored. Using the `
 
 The `--comment=STRING` option lets you specify how comments are introduced, e.g., `#` for Python or `//` for Java. When
 specified, lines containing only comments will also be ignored.
+
+Since your script takes its input from STDIN, you need to have a way to feed it data through STDIN.
+One approach would be to use a different script that given a filename prints its output to STDOUT, so that
+you can chain them
+
+```bash
+$ python print.py input-file | python loc.py
+```
+
+You can also rely on `cat`, which does the same as `print.py`:
+
+```bash
+$ cat input-file | python loc.py
+```
+
+You can also use the built-in `<` shell operator:
+
+```bash
+$ python loc.py < input-file
+```
