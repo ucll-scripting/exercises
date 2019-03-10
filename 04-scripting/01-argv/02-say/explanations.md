@@ -35,3 +35,23 @@ The expected behavior is
 $ python say.py hello world
 hello world
 ```
+
+## Shebang
+
+Currently, in order to execute a script, you need to write `python script.py`.
+You can shorten this to `./script.py` if you add the following line at the top of your script:
+
+```python
+#!usr/bin/env python
+```
+
+Note that this does not work inside all shells. Bash (Git Bash, Linux, MacOS) supports it,
+but PowerShell does not. Under MacOS and Linux, you will probably also need
+to give execute permissions to your script:
+
+```bash
+$ chmod u+x script.py
+```
+
+This is completely optional: you'll always be able to run your scripts the
+explicit way, i.e., using `python script.py`.
