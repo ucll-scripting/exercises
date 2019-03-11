@@ -39,4 +39,4 @@ Start [here](https://xkcd.com/json.html).
 
 1. Find a way to download this data.
 2. Find a way to parse JSON. Don't do this manually, but rely on a Python module instead.
-3. Find a way to view an image. Hint: Pillow may help, but this is not the only option.
+3. Find a way to view an image. Hint: Pillow may help, but this is not the only option. You will probably have to install an extra module. Look for `pip install`.
