@@ -58,6 +58,6 @@ file.close()
 
 This approach is quite risky though: something bad could happen
 in between the `open` and `close`, causing an exception to be thrown.
-In that case, file `file.closed()` line would not be executed.
+In that case, the `file.closed()` line would not be executed.
 The `with` statement takes care of this eventuality: whatever
 happens in its body, it guarantees the file will be closed.
