@@ -28,7 +28,7 @@ def fetch_image(url):
         return Image.open(stream)
 
 
-data = fetch_data(None if len(sys.argv) == 1 else int(sys.argv[1]))
+data = fetch_data(None if len(sys.argv) == 1 else sys.argv[1])
 
 for key, value in data.items():
     print(f'{key}: {value}')
