@@ -10,7 +10,6 @@ def fetch_data(n):
     Gets the JSON data (parsed into a dictionary) for comic with number n.
     '''
     if n:
-        n = int(sys.argv[1])
         url = f'http://xkcd.com/{n}/info.0.json'
     else:
         url = 'http://xkcd.com/info.0.json'
@@ -28,7 +27,7 @@ def fetch_image(url):
         return Image.open(stream)
 
 
-data = fetch_data(None if len(sys.argv) == 1 else sys.argv[1])
+data = fetch_data(None if len(sys.argv) == 1 else int(sys.argv[1]))
 
 for key, value in data.items():
     print(f'{key}: {value}')
