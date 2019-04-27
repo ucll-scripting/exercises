@@ -19,7 +19,7 @@ for event in calendar.events:
         for name in re.split("\n", match.group(1).strip()):
             # Skip events with no lecturers
             if name:
-                table[name] = table.setdefault(name, timedelta(0)) + event.duration
+                table[name] = table.get(name, timedelta(0)) + event.duration
 
 
 for name, duration in sorted(table.items(), key=lambda pair: -pair[1]):
