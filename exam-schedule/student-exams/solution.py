@@ -3,10 +3,9 @@
 import argparse
 import sys
 import csv
-import re
 
 
-parser = argparse.ArgumentParser(prog='exam-schedule')
+parser = argparse.ArgumentParser()
 parser.add_argument('filename', help='.csv file to consult')
 parser.add_argument('id', help='student id')
 parser.add_argument('--format', help='format string', default='%d %c')
