@@ -8,4 +8,4 @@ As discussed before, Python provides the following functions:
 There is a third function that checks if the *beginning* of `string` matches `regex`.
 Look for it in the [Python docs](https://docs.python.org/3/library/re.html) and use it to solve this exercise.
 
-Write a function `starts_with_a(string)` that checks whether `string` contains an `a`.
+Write a function `starts_with_a(string)` that checks whether `string` starts with an `a`.
