@@ -1,7 +1,7 @@
 # Assignment
 
 Write a script that can be used to quickly create thumbnails (i.e. smaller versions) of a images.
-Each thunbmail's name is derived from the original name. By default, `-thumbnail` is added:
+Each thumbnail's name is derived from the original name. By default, `-thumbnail` is added:
 
 ```text
 a.png   -> a-thumbnail.png

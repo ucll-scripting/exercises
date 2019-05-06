@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import argparse
 import sys
 import re
@@ -43,6 +45,7 @@ def create_parser():
     parser.add_argument('-l', '--lines', help='print line count', dest='counters', action='append_const', const=line_count)
     parser.add_argument('-m', '--chars', help='print character counts', dest='counters', action='append_const', const=char_count)
     parser.add_argument('-w', '--words', help='print word counts', dest='counters', action='append_const', const=word_count)
+    parser.set_defaults(counters = [ line_count, word_count, char_count ])
 
     return parser
 
@@ -74,12 +77,10 @@ def convert_to_strings(table):
 def main():
     args = create_parser().parse_args()
 
-    # If no counters were specified, use defaults
-    counters = args.counters or [ line_count, word_count, char_count ]
     files = args.files
 
     # Collect counts for each file
-    table = collect_data(files, counters)
+    table = collect_data(files, args.counters)
 
     # Add total row if necessary
     add_total_row(table)

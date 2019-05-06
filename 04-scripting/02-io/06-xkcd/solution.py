@@ -8,6 +8,7 @@ import sys
 def fetch_data(n):
     '''
     Gets the JSON data (parsed into a dictionary) for comic with number n.
+    Edge case '0' is handled nicely in the sense that the comic of today will be requested ("if n:" will evaluate to falsey)
     '''
     if n:
         url = f'http://xkcd.com/{n}/info.0.json'
