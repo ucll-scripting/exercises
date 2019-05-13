@@ -8,6 +8,8 @@ $ source run-server.sh
 
 This sets up a website locally, which you can visited
 in your browser at `http://127.0.0.1:5000/index.html`.
+If the run-server.sh gives ModuleNotFoundError: No module named 'flask',
+make sure flask is installed ;-) (pip install flask should do the trick).
 
 The website consists of many different html pages
 that are randomly generated. The goal of this exercise
