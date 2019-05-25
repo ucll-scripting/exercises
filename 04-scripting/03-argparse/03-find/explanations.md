@@ -13,7 +13,7 @@ The following functionality must be supported:
 * `--extension=EXT`: only list entries with extension `EXT`
 * `--contains=REGEX`: only list files whose contents match `REGEX`.
 
-To get a better feel for how your script should word, feel free
+To get a better feel for how your script should work, feel free
 to experiment with the solution. For example, try
 
 ```bash
