@@ -27,7 +27,7 @@ have done that, you can make the function smarter.
 Next, `remove_repeated_words`:
 
 ```python
-def remove_trailing_whitespace(string):
+def remove_repeated_words(string):
     def replace(match):
         return match.group(1)
 
