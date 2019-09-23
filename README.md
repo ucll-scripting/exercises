@@ -33,7 +33,8 @@ Install the following software:
 
 * [Git](https://git-scm.com/)
 * [Python 3](https://www.python.org/downloads/)
-  * During the installation, don't forget to have Python added to environment variables
+  * During the installation, don't forget to have Python added to environment variables 
+  * During the installation, don't forget to check pip as optional feature as well
 * [Visual Studio Code](https://code.visualstudio.com/)
   * Windows users: during the installation, have it install the explorer context menu additions
   * Install the VSCode Markdown Preview Mermaid extension.
@@ -60,6 +61,7 @@ If you get an error or the wrong version, inform a lecturer.
 
 Next, open a terminal in a directory where you wish to store your course-related files.
 Enter the commands below.
+If the pip command does not work, look online for 'how to install pip'.
 
 **Windows Users**
 ```bash
