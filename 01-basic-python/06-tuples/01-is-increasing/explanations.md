@@ -24,7 +24,7 @@ For example, try the following in a Python shell:
 >>> xs = [1, 2, 3]
 >>> ys = ['a', 'b', 'c']
 
->>> zip(xs, ys)
+>>> list(zip(xs, ys))
 [(1, 'a'), (2, 'b'), (3, 'c')]
 ```
 
