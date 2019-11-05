@@ -7,4 +7,4 @@ Write a function `median(ns)` that returns the median of the list. To find the m
 * If `ns` has an even number of elements, the median is the average of the two elements around the centr. For example, the median of `[a, b, c, d, e, f]` is the average of `c` and `d`.
 
 To implement this algorithm, you'll need to determine how long `ns` is.
-You will need to look up how, as Python's syntax deviates from other most language.
+You will need to look up how, as Python's syntax deviates from other most languages.
