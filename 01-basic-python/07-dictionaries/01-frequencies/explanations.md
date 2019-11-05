@@ -7,7 +7,7 @@ Dictionaries are containers that allow you to
 store associations between values, commonly called the key and value.
 A typical example would be an actual
 dictionary, where each word (key)
-its associated with its description (value).
+it is associated with its description (value).
 Dictionaries are data structures optimized for
 quickly looking up the value associated with a given
 key. The other way around is *possible*, but very slow.
