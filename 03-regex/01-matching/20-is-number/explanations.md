@@ -5,7 +5,7 @@ represents a valid number. A number consists of a number of digits,
 *optionally* followed by a dot and another series of digits.
 
 The dot might prove problematic: `.` already means something in regex-speak.
-If you want the need for an actual dot to appear in the string,
+If you need an actual dot to appear in the string,
 you will need to *escape* it: use `\.` instead of `.`
 
 You already know about the following shortcut operators:
