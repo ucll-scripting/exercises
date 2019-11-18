@@ -52,7 +52,7 @@ if re.fullmatch(r'(\d{2}):(\d{2}):(\d{2})(\.\d{3})?', string):
 ```
 
 This tells the regex engine to store the parts of `string` that match those
-patterns. Now, how to we access this data?
+patterns. Now, how do we access this data?
 
 `fullmatch` (as well as `match` and `search`) don't return an boolean value.
 If the string does not match the pattern, they return `None`, which is a falsey value,
