@@ -176,3 +176,46 @@ Open a file from the shell
 ```bash
 $ code filename
 ```
+
+## Overview of some example libraries used in the more challenging exercises
+
+After exercise sets 01, 02, 03 and 04, we provide you with a set of more challenging exercises. To give you an idea about some of the libraries used, here's an overview. The idea is that you chose yourself what interests and/or challenges you.
+
+backup
+  zipfile
+  datetime
+  argparse
+  sys
+  os
+
+exam schedule
+  sys
+  csv
+  argparse
+
+ical
+  datetime
+  ics
+  sys
+  re
+
+imdb
+  pandas
+  csv
+  sys
+
+scraping
+  urllib
+  re
+
+shell tools
+  sys
+  re
+  os
+  argparse
+
+toledo unpack
+  zipfile
+  sys
+  re
+  os
