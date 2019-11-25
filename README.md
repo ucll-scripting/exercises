@@ -181,6 +181,7 @@ $ code filename
 
 After exercise sets 01, 02, 03 and 04, we provide you with a set of more challenging exercises. To give you an idea about some of the libraries used, here's an overview. The idea is that you chose yourself what interests and/or challenges you.
 
+```bash
 backup
   zipfile
   datetime
@@ -219,3 +220,4 @@ toledo unpack
   sys
   re
   os
+```
