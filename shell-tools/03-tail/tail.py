@@ -12,15 +12,9 @@ def create_parser():
 
 
 def print_tail(stream, n):
-    lines = []
-
-    for line in stream:
-        lines.append(line)
-        lines = lines[-n:]
-
-    for line in lines:
+    lines = stream.readlines()
+    for line in lines[-n:]:
         print(line, end="")
-
 
 args = create_parser().parse_args()
 
