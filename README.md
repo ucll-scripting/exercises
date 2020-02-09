@@ -110,7 +110,7 @@ To check your solution:
 $ scripting test
 ```
 
-This will run all tests in the current directory and all subdirectories. Generally, you will want to perform this command inside an exercise's directory, but run tests of many exercises at once, you can also execute it in a parent directory.
+This will run all tests in the current directory and all subdirectories. Generally, you will want to perform this command inside an exercise's directory, but to run tests of many exercises at once, you can also execute it in one of the parent directories.
 
 ## Remaining Up-To-Date
 
