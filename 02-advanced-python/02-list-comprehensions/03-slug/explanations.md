@@ -11,3 +11,10 @@ Some names consist of three 'words', e.g., `Simon Peyton Jones`. In
 these cases, you should assume that the first name
 corresponds to the first word and the remaining words together
 form the last name. This results in the slug `peyton-jones-simon`.
+
+Some other examples:
+
+* 'Prince' results in slug `prince`
+* 'Dennis Ritchie' results in slug `ritchie-dennis`
+* 'Guido van Rossum' results in slug `van-rossum-guido`
+* 'John Wilkes Booth' results in slug `wilkes-booth-john`
