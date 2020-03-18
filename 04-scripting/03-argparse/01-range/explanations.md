@@ -32,7 +32,7 @@ Apart from `log`, all the other parameters are optional: `git log` would also wo
 
 We distinguish three kinds of parameters:
 
-* Positional parameters. In the example above, `log` and `.` are position. They work the same as in Java or JavaScript: their position determine their meaning. For example, `git log .` is correct, `git . log` is not.
+* Positional parameters. In the example above, `log` and `.` are positional. They work the same as in Java or JavaScript: their position determines their meaning. For example, `git log .` is correct, `git . log` is not.
 * Flags (or switches), such as `-i`. These turn on some options. In our case, it turns on the case insensitive option.
 * Options such as `--author=abel` and `--format=%ad`. These have names (`author` and `format`) and expect arguments (`abel` and `%ad`).
 

@@ -16,7 +16,7 @@ def remove_trailing_whitespace(string):
     def replace(match):
         return ''
 
-    return re.sub(' +$', replace, flags=re.MULTILINE)
+    return re.sub(' +$', replace, string, flags=re.MULTILINE)
 ```
 
 Here, `''` has been replaced by a function returning `''`.

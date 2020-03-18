@@ -11,7 +11,7 @@ how the function decides what is the greatest value. `key` must be bound to a fu
 which returns the property that should be maximized. An example might make this clearer.
 
 Say we have a list of `Person` objects. Each person has an age, a height and a weight.
-We want to find
+We want to find:
 
 * The oldest person
 * The tallest person

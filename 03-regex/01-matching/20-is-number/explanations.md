@@ -5,10 +5,10 @@ represents a valid number. A number consists of a number of digits,
 *optionally* followed by a dot and another series of digits.
 
 The dot might prove problematic: `.` already means something in regex-speak.
-If you want the need for an actual dot to appear in the string,
+If you need an actual dot to appear in the string,
 you will need to *escape* it: use `\.` instead of `.`
 
-You also already know about the following shortcut operators:
+You already know about the following shortcut operators:
 
 * `x*` means the same as `x{0,}`.
 * `x+` means the same as `x{1,}`.

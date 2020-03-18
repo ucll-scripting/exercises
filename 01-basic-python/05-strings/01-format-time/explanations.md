@@ -35,7 +35,7 @@ result = str(h) + ":" + str(m) + ":" + str(s)
 This is quite cumbersome. Fortunately, there is an easier way: string interpolation.
 
 ```python
-f'{h}:{m}:{s}'
+result = f'{h}:{m}:{s}'
 ```
 
 String interpolation needs to be explicitly activated by prefixing the string

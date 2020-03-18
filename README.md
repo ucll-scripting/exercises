@@ -33,7 +33,8 @@ Install the following software:
 
 * [Git](https://git-scm.com/)
 * [Python 3](https://www.python.org/downloads/)
-  * During the installation, don't forget to have Python added to environment variables
+  * During the installation, don't forget to have Python added to environment variables (!)
+  * Also double check that pip is selected as optional feature as well
 * [Visual Studio Code](https://code.visualstudio.com/)
   * Windows users: during the installation, have it install the explorer context menu additions
   * Install the VSCode Markdown Preview Mermaid extension.
@@ -60,6 +61,7 @@ If you get an error or the wrong version, inform a lecturer.
 
 Next, open a terminal in a directory where you wish to store your course-related files.
 Enter the commands below.
+If the pip command does not work, look online for 'how to install pip'.
 
 **Windows Users**
 ```bash
@@ -108,7 +110,7 @@ To check your solution:
 $ scripting test
 ```
 
-This will run all tests in the current directory and all subdirectories. Generally, you will want to perform this command inside an exercise's directory, but run tests of many exercises at once, you can also execute it in a parent directory.
+This will run all tests in the current directory and all subdirectories. Generally, you will want to perform this command inside an exercise's directory, but to run tests of many exercises at once, you can also execute it in one of the parent directories.
 
 ## Remaining Up-To-Date
 
@@ -173,4 +175,49 @@ Open a file from the shell
 
 ```bash
 $ code filename
+```
+
+## Overview of some example libraries used in the more challenging exercises
+
+After exercise sets 01, 02, 03 and 04, we provide you with a set of more challenging exercises. To give you an idea about some of the libraries used, here's an overview. The idea is that you chose yourself what interests and/or challenges you.
+
+```bash
+backup
+  zipfile
+  datetime
+  argparse
+  sys
+  os
+
+exam schedule
+  sys
+  csv
+  argparse
+
+ical
+  datetime
+  ics
+  sys
+  re
+
+imdb
+  pandas
+  csv
+  sys
+
+scraping
+  urllib
+  re
+
+shell tools
+  sys
+  re
+  os
+  argparse
+
+toledo unpack
+  zipfile
+  sys
+  re
+  os
 ```
