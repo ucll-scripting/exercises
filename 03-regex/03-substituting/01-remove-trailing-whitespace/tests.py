@@ -6,25 +6,14 @@ from scripting.reference import active_reference_implementation_from_id, referen
 
 with reference_file('solution.py'):
     with reference_based_test('remove_trailing_whitespace') as testcase:
-        testcase('''
-        fdjfkld jfjs fjdslfk
-        '''.strip())
-
-        testcase('''
-        fdjfkld jfjs fjdslfk\x20
-        '''.strip())
-
-        testcase('''
-        fdjfkld jfjs fjdslfk\x20\x20
-        '''.strip())
-
-        testcase('''
-        fdjfkld jfjs fjdslfk\t\t
-        '''.strip())
+        testcase('fdjfkld jfjs fjdslfk'.strip())
+        testcase('fdjfkld jfjs fjdslfk ')
+        testcase('fdjfkld jfjs fjdslfk\t')
+        testcase('fdjfkld jfjs fjdslfk       ')
+        testcase('x  \ny   ')
 
         testcase('''
         fdf qqip saofp k\x20\t\x20
         fjdklfj f sfjslkf\x20\x20\x20\x20\x20\x20
-        fdjfkldjf\x20\x20
-        '''.strip())
+        fdjfkldjf\x20\x20''')
 
