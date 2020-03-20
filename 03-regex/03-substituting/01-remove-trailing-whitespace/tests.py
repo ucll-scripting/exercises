@@ -11,8 +11,20 @@ with reference_file('solution.py'):
         ''')
 
         testcase('''
-        fdf qqip saofp k
-        fjdklfj f sfjslkf
-        fdjfkldjf
+        fdjfkld jfjs fjdslfk\x20
+        ''')
+
+        testcase('''
+        fdjfkld jfjs fjdslfk\x20\x20
+        ''')
+
+        testcase('''
+        fdjfkld jfjs fjdslfk\t\t
+        ''')
+
+        testcase('''
+        fdf qqip saofp k\x20\t\x20
+        fjdklfj f sfjslkf\x20\x20\x20\x20\x20\x20
+        fdjfkldjf\x20\x20
         ''')
 
