@@ -22,7 +22,7 @@ def derive_output_filename(pattern, input_file):
     path = Path(input_file)
     basename = path.stem
     extension = path.suffix
-    return pattern.replace('%b', basename).replace('%x', extension)
+    return pattern.replace('%b', basename).replace('.%x', extension)
 
 
 parser = argparse.ArgumentParser(prog='thumbnail')
