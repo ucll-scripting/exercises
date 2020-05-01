@@ -7,7 +7,7 @@ import re
 
 
 def parse_size(string):
-    match = re.fullmatch(r'(\d+)x(\d+)', args.size)
+    match = re.fullmatch(r'(\d+)x(\d+)', string)
 
     if not match:
         print('Invalid size --- should have format WxH')
