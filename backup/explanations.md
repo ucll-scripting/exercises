@@ -3,7 +3,8 @@
 Write a script for making backups.
 
 ```bash
-$ python backup.py /c/backups /c/important-files
+$ python backup.py /c/backups /c/important-files (linux)
+$ python backup.py c:/backups c:/important-files (win)
 ```
 
 should create a file named `YEAR-MONTH-DAY.zip` in the `backups` directory

@@ -262,7 +262,7 @@ we advice against it:
 
 * Scripts written in different languages can communicate because data is encoded as strings. This is actually incredibly inefficient. For example, each time a numeric value needs to be transferred, it must be converted to a string, only to be parsed again into a number. If you remain within the same language, no such translations are necessary.
 
-What's best mostly depends on your actual needs. There are many aspects to take into considerations:
+What's best mostly depends on your actual needs. There are many aspects to take into consideration:
 
 * There are many shells. Not all shells are available on all platforms. Does your script need to be run on other platforms, or only on your own?
 * Some shells do not make use of strings to transfer data. For example, Powershell allows integers, booleans, even entire objects to retain their structure, which makes it a lot more efficient and safer.

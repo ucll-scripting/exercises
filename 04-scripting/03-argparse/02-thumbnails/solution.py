@@ -7,7 +7,7 @@ import re
 
 
 def parse_size(string):
-    match = re.fullmatch(r'(\d+)x(\d+)', args.size)
+    match = re.fullmatch(r'(\d+)x(\d+)', string)
 
     if not match:
         print('Invalid size --- should have format WxH')
@@ -22,7 +22,7 @@ def derive_output_filename(pattern, input_file):
     path = Path(input_file)
     basename = path.stem
     extension = path.suffix
-    return pattern.replace('%b', basename).replace('%x', extension)
+    return pattern.replace('%b', basename).replace('.%x', extension)
 
 
 parser = argparse.ArgumentParser(prog='thumbnail')

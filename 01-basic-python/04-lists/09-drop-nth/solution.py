@@ -1,2 +1,2 @@
-def drop_nth(xs, i):
-    return xs[:i] + xs[i+1:]
+def drop_nth(xs, n):
+    return xs[:n] + xs[n+1:]

@@ -21,7 +21,7 @@ utterly useless spaces and shreds them to nothingness.
 * A replacement string
 * The string in which to perform the substitutions
 
-Let's find outwhich values to pass to `sub`.
+Let's find out which values to pass to `sub`.
 
 The third parameter is easy: it's whatever string `remove_trailing_whitespace` receives.
 The second parameter is not too difficult either: since we want

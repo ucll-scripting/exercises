@@ -3611,3 +3611,5 @@ with ZipFile('package.zip', 'w') as zip:
 
         with zip.open(submission_filename, 'w') as f:
             f.write(generate_data_file().encode('utf-8'))
+
+print("There you go! I created a file package.zip for you.")

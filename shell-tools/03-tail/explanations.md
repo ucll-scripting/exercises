@@ -1,9 +1,9 @@
 # Explanations
 
-`head` should print the last 5 lines of a given file.
+`tail` should print the last 5 lines of a given file.
 
 ```bash
-$ head FILENAME
+$ tail FILENAME
 5 last lines of FILENAME
 ```
 
