@@ -45,9 +45,9 @@ Count the number of commits done by author and write the results
 to `output.txt`:
 
 ```text
-Connor Van Esbroeck 3
-Liwady Yermolovich 2
-Nathan Van Beneden 1
+Connor Van Esbroeck: 3
+Liwady Yermolovich: 2
+Nathan Van Beneden: 1
 ```
 
 Order the entries by descending number of commits.
