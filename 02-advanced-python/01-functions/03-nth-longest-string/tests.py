@@ -10,10 +10,10 @@ with reference_file('solution.py'):
         testcase(2, [ 'a', 'bb', 'ccc', 'dddd' ])
         testcase(3, [ 'a', 'bb', 'ccc', 'dddd' ])
         testcase(4, [ 'a', 'bb', 'ccc', 'dddd' ])
-        testcase(1, [ 'bb', 'ccc', 'a', 'dddd' ])
-        testcase(2, [ 'bb', 'ccc', 'a', 'dddd' ])
-        testcase(3, [ 'bb', 'ccc', 'a', 'dddd' ])
-        testcase(4, [ 'bb', 'ccc', 'a', 'dddd' ])
+        testcase(1, [ 'bbb', 'cc', 'aaaa', 'd' ])
+        testcase(2, [ 'bbb', 'cc', 'aaaa', 'd' ])
+        testcase(3, [ 'bbb', 'cc', 'aaaa', 'd' ])
+        testcase(4, [ 'bbb', 'cc', 'aaaa', 'd' ])
 
         for i in range(1, 10):
             testcase(i, [ 'x' * ((5 * k) % 17) for k in range(1, 17) ])
