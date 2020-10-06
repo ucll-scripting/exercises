@@ -6,7 +6,7 @@ First, run `run-server.sh`:
 $ source run-server.sh
 ```
 
-This sets up a website locally, which you can visited
+This sets up a website locally, which you can visit
 in your browser at `http://127.0.0.1:5000/index.html`.
 If the run-server.sh gives ModuleNotFoundError: No module named 'flask',
 make sure flask is installed ;-) (pip install flask should do the trick).
