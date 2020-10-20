@@ -115,6 +115,7 @@ if match:
 ```
 
 Now write the function `parse_time(string)` that expects a time with optional milliseconds.
+The time can be any stopwatch-based time: e.g. 00:00:00:001, 11:12:13 or 37:42:09.642 all should be valid strings.
 If `string` is invalid, the function should return `None`, otherwise it should
 return a tuple with four integers representing the hours, minutes, seconds
 and milliseconds components of the given time.
