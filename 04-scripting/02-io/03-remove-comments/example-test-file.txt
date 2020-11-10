@@ -1,0 +1,16 @@
+***once your python solution has run, you can revert to the original test file with CTRL-Z if it's opened e.g. in Code***
+
+aloha
+boeja #baise <= should disappear
+#watisdit <= should disappear
+en deez
+
+en ook deez nog
+#boem <= should disappear
+
+
+a
+bb
+ccc
+dddd #shoulddisappearaswell <= should disappear
+eeee #bla fffff gggggg hhhhhhhh <= should disappear
