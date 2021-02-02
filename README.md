@@ -65,16 +65,16 @@ If the pip command does not work, look online for 'how to install pip'.
 
 **Windows Users**
 ```bash
-$ pip install git+https://github.com/UCLeuvenLimburg/scripting.git
+$ pip install git+https://github.com/ucll-scripting/testing-framework.git
 
-$ git clone https://github.com/UCLeuvenLimburg/scripting-exercises.git
+$ git clone https://github.com/ucll-scripting/-exercises.git
 ```
 
 **Mac Users**
 ```bash
-$ pip3 install git+https://github.com/UCLeuvenLimburg/scripting.git
+$ pip3 install git+https://github.com/ucll-scripting/testing-framework.git
 
-$ git clone https://github.com/UCLeuvenLimburg/scripting-exercises.git
+$ git clone https://github.com/ucll-scripting/-exercises.git
 ```
 
 Test the installation of the scripting package by executing the following command.
@@ -120,8 +120,8 @@ to subscribe to updates.
 
 Open both these pages:
 
-* [`scripting` repository](https://github.com/UCLeuvenLimburg/scripting)
-* [Exercises repository](https://github.com/UCLeuvenLimburg/scripting-exercises)
+* [`scripting` repository](https://github.com/ucll-scripting/scripting)
+* [Exercises repository](https://github.com/ucll-scripting/exercises)
 
 Press the Watch dropdown button (upper right corner)
 and select 'Releases only'.
@@ -138,7 +138,7 @@ $ git pull
 Enter the following command in a terminal (`pip3` for Mac users):
 
 ```bash
-$ pip install --upgrade git+https://github.com/UCLeuvenLimburg/scripting.git
+$ pip install --upgrade git+https://github.com/ucll-scripting/testing-framework.git
 ```
 
 ### Updating the exercises
@@ -149,7 +149,6 @@ and enter the following command:
 ```bash
 $ git pull
 ```
-
 
 ## Other Useful Shell Commands
 
