@@ -22,6 +22,6 @@ You will see that Python has *a lot* of built-in functions for you to make use o
 Therefore, it is very important that you develop the habit of skimming through the documentation and looking up information online.
 
 * [Installation](http://scripting.leone.ucll.be/docs/guides/installation.html)
-* [Usage](http://scripting.leone.ucll.be/docs/guides/usage.html)
 * [Remaining Up-To-Date](http://scripting.leone.ucll.be/docs/guides/updating.html)
+* [Usage](http://scripting.leone.ucll.be/docs/guides/usage.html)
 * [Useful Shell Commands](http://scripting.leone.ucll.be/docs/guides/shell.html)
