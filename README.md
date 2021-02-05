@@ -25,3 +25,4 @@ Therefore, it is very important that you develop the habit of skimming through t
 * [Remaining Up-To-Date](http://scripting.leone.ucll.be/docs/guides/updating.html)
 * [Usage](http://scripting.leone.ucll.be/docs/guides/usage.html)
 * [Useful Shell Commands](http://scripting.leone.ucll.be/docs/guides/shell.html)
+* [Planning](http://scripting.leone.ucll.be/docs/guides/planning.html)
