@@ -4,7 +4,7 @@ import string
 import sys
 
 
-filename = sys.argv[1]
+filename = 'crack.zip'
 alphabet = string.ascii_lowercase
 
 with ZipFile(filename) as zip:
