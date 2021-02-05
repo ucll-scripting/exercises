@@ -12,40 +12,86 @@ Install the following software:
   * Windows users: during the installation, have it install the explorer context menu additions
   * Install the VSCode Markdown Preview Mermaid extension.
 
-Make sure to check your Python version as follows (this is especially important for Mac and Linux users).
-Open a terminal and input the following command.
-(**Omit the `$`!** It is conventional to prefix
-lines with commands you are expected to enter with `$`.)
+## Checking Your Python Installation
+
+It's important to check that your Python installation works.
+This can be slightly tricky, since the details depend on your OS.
+There are two kinds of problems that can arise:
+
+* Python cannot be found
+* The wrong version of Python is found
+
+Below are instructions that verify both at the same type.
+The goal is that you get Python to tell you which version it is, and that this version is 3.6 or higher.
+If you encounter problems, inform a lecturer.
+
+IMPORTANT: a `$` in the beginning of a line means that you should input that line in a shell.
+**Do not write the `$` itself though, only what follows**. For example, `$ ls` means you should enter `ls`.
+Similary, a `#` represents comments, so these can be omitted altogether.
+
+### Windows
+
+In a shell, write
 
 ```bash
 $ python --version
 ```
 
-This should respond with the installed Python version. You need at least 3.6.
-If it responds with some 2.x version, you're probably a Mac user. Try again with
+If this gives you trouble, try instead
+
+```bash
+$ py --version
+```
+
+### Mac
+
+In the terminal, write
+
+```bash
+$ python --version
+```
+
+If this doesn't work or prints out the wrong version, try
 
 ```bash
 $ python3 --version
 ```
 
-If you get an error or the wrong version, inform a lecturer.
+### Linux
+
+In a shell, write
+
+```bash
+$ python --version
+```
+
+If this doesn't work or prints out the wrong version, try
+
+```bash
+$ python3 --version
+```
+
+## Checking Your Pip Installation
+
+Pip is Python's package manager: it allows you to easily install now components.
+Check if it works by trying out the commands below:
+
+```bash
+$ pip --version
+
+$ pip3 --version
+```
+
+One of these should work and should output something mentioning Python 3.
+If this isn't the case, inform a lecturer.
 
 ## Course Related Material
 
 Next, open a terminal in a directory where you wish to store your course-related files.
 Enter the commands below.
-If the pip command does not work, look online for 'how to install pip'.
 
-**Windows Users**
 ```bash
 $ pip install git+https://github.com/ucll-scripting/testing-framework.git
-
-$ git clone https://github.com/ucll-scripting/exercises.git
-```
-
-**Mac Users**
-```bash
-$ pip3 install git+https://github.com/ucll-scripting/testing-framework.git
 
 $ git clone https://github.com/ucll-scripting/exercises.git
 ```
