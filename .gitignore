@@ -1,8 +1,5 @@
 *.zip
 
-# Created by https://www.gitignore.io/api/python
-# Edit at https://www.gitignore.io/?templates=python
-
 .vscode
 
 ### Python ###
@@ -124,5 +121,3 @@ dmypy.json
 
 ### Python Patch ###
 .venv/
-
-# End of https://www.gitignore.io/api/python
