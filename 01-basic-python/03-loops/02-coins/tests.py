@@ -19,3 +19,5 @@ with reference_file('solution.py'):
         testcase(2, 0, 1, 7)
         testcase(2, 0, 1, 8)
         testcase(2, 1, 1, 8)
+        testcase(0, 0, 1, 4)
+        testcase(0, 1, 1, 6)
