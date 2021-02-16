@@ -6,7 +6,6 @@ from scripting.reference import active_reference_implementation_from_id, referen
 
 with reference_file('solution.py'):
     with reference_based_test('word_count') as testcase:
-        testcase('')
         testcase('a')
         testcase('a b')
         testcase('a a')
