@@ -1,13 +1,9 @@
-from pandas import read_csv, set_option, concat
 import csv
+import sys
 
-set_option('display.max_colwidth', -1)
-mylist = []
-for chunk in  read_csv('../title-basics.tsv', sep='\t', chunksize=20000):
-    mylist.append(chunk)
-data = concat(mylist, axis= 0)
-del mylist
-data = data.loc[data.titleType == 'movie']
-data['primaryTitleLength'] = data.primaryTitle.apply(len)
-data = data.sort_values(['primaryTitleLength'], ascending=False)
-print(data.primaryTitle.head(100).to_string(index=False))
+
+with open('../title-basics.tsv', encoding="utf-8") as file:
+    reader = csv.DictReader(file, delimiter='\t')
+    top = sorted((row['originalTitle'] for row in reader), reverse=True, key=len)[0:100]
+
+print("\n".join(top))
