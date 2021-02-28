@@ -2,7 +2,6 @@
 
 Write a script that converts [`.csv`](https://en.wikipedia.org/wiki/Comma-separated_values) files into [`.json`](https://en.wikipedia.org/wiki/JSON) files.
 Use the headers of the `.csv` as keys for the `.json` file as shown in the example below.
-
 ## Example
 
 ```csv
