@@ -1,5 +1,7 @@
 *.zip
 .vscode
+*.csv
+*.tsv
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
