@@ -6,7 +6,7 @@ import os
 
 
 def create_parser():
-    parser = argparse.ArgumentParser(prog='uniq')
+    parser = argparse.ArgumentParser()
 
     parser.add_argument('file', help='file', nargs='?')
     parser.add_argument('-i', '--ignore-case', dest='case_sensitive', action='store_false')
