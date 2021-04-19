@@ -65,5 +65,3 @@ def index():
 @app.route('/<name>')
 def page(name):
     return website[name]
-
-
