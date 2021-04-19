@@ -1,5 +1,7 @@
 # Explanations
 
+Make sure you have the necessary files by running `prepare.py` in the parent directory.
+
 Write a script that allows you to extract your personal schedule from the full exam schedule.
 
 ```bash

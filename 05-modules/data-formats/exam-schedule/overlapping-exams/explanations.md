@@ -1,5 +1,7 @@
 # Explanations
 
+Make sure you have the necessary files by running `prepare.py` in the parent directory.
+
 Write a script that looks for students with two exams at the same moment.
 Each exam takes place on a certain day, in a certain "part of day" (morning, afternoon of evening).
 Two exams overlap if they share both day and part of day.
