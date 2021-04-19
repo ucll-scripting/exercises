@@ -35,7 +35,7 @@ def show(data):
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('name', default='', nargs='?')
+parser.add_argument('name', nargs='?')
 args = parser.parse_args()
 
 if args.name:
