@@ -41,7 +41,7 @@ a b c d
 1 2 3 4
 xx yy zz
 
-$ python select.py data.txt
+$ python select.py data.txt 2
 b
 2
 yy
