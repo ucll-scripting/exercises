@@ -29,8 +29,8 @@ def show(data):
         for i in range(1, 16):
             ingredient = drink[f'strIngredient{i}']
             if ingredient is not None:
-                amount = drink[f'strMeasure{i}'].strip()
-                print(f"{ingredient} ({amount})")
+                measure = drink[f'strMeasure{i}']
+                print(f"{ingredient}{f'({measure.strip()})' if measure else ''}")
         print()
 
 
