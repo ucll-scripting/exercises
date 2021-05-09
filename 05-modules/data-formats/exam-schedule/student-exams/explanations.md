@@ -25,10 +25,10 @@ Technieken van datamodellering
 Computersystemen
 
 $ python ./solution.py ../exam-schedule.csv R0661011 --format="`%d at %t %c (location %l)`"
-24-08-18 at %t Algoritmisch denken (location D1.16)
-30-08-18 at %t Webontwikkeling 2 (location D1.22)
-29-08-18 at %t Technieken van datamodellering (location C0.01/C0.02)
-22-08-18 at %t Computersystemen (location D0.80 - 1.80)
+24-08-18 at 13:00 Algoritmisch denken (location D1.16)
+30-08-18 at 13:00 Webontwikkeling 2 (location D1.22)
+29-08-18 at 13:00 Technieken van datamodellering (location C0.01/C0.02)
+22-08-18 at 13:00 Computersystemen (location D0.80 - 1.80)
 ```
 
 The following placeholders should be supported
@@ -41,7 +41,7 @@ The following placeholders should be supported
 | `%p` | part of day |
 | `%c` | course |
 | `%l` | location |
-| `%h` | hour |
+| `%t` | hour |
 
 </center>
 

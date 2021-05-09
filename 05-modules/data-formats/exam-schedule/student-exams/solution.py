@@ -30,6 +30,6 @@ with open(args.filename) as file:
             output = output.replace('%p', part_of_day)
             output = output.replace('%c', course)
             output = output.replace('%l', location)
-            output = output.replace('%h', hour)
+            output = output.replace('%t', hour)
 
             print(output)
