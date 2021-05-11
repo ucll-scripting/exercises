@@ -1,4 +1,10 @@
+
 import urllib.request
+from zipfile import ZipFile
 
 
-urllib.request.urlretrieve('http://scripting.leone.ucll.be/data/COVID19BE_VACC.json', 'covid.json')
+urllib.request.urlretrieve('http://scripting.leone.ucll.be/data/covid.zip', 'covid.zip')
+
+
+with ZipFile('covid.zip') as file:
+    file.extract('covid.json')
