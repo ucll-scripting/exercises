@@ -52,7 +52,7 @@ The first five lines represent the ranking of the first race:
 4. D
 5. E
 
-A finised first and therefore gains 5 points.
+A finished first and therefore gains 5 points.
 B is second and earns 4 points.
 C gets 3 points, D 2 points and E 1 point.
 
@@ -96,4 +96,3 @@ A
 C
 B
 ```
-
