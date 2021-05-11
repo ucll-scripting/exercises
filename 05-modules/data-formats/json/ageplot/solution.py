@@ -10,12 +10,7 @@ table = {}
 
 for entry in data:
     age_group = entry['AGEGROUP']
-    count = entry['CUMUL']
-
-    if count == '<10':
-        count = 5
-    else:
-        count = int(count)
+    count = entry['COUNT']
 
     table[age_group] = table.get(age_group, 0) + count
 
@@ -27,5 +22,4 @@ plt.rcdefaults()
 fig, ax = plt.subplots()
 ax.barh(range(len(age_groups)), counts)
 ax.set_yticklabels([0, *age_groups])
-print(table)
 plt.show()
