@@ -10,7 +10,12 @@ table = {}
 
 for entry in data:
     age_group = entry['AGEGROUP']
-    count = entry['COUNT']
+    count = entry['CUMUL']
+
+    if count == '<10':
+        count = 5
+    else:
+        count = int(count)
 
     table[age_group] = table.get(age_group, 0) + count
 
