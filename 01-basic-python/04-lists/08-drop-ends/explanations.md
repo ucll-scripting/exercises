@@ -1,3 +1,10 @@
 # Assignment
 
-Write a function `drop_ends(xs)` that drops both the first and last element of `xs`.
+Translate this function that drops both the first and last element of `xs`.
+
+```javascript
+function dropEnds(xs)
+{
+    return xs.slice(1, xs.length - 1);
+}
+```
