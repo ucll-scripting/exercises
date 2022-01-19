@@ -9,3 +9,32 @@ Write a function `card_value(string)` that determines the value of the card.
 | Queen| 12    |
 | King | 13    |
 | Ace  | 1     |
+
+```javascript
+function cardValue(string)
+{
+    if ( string === 'Jack' )
+    {
+        return 11;
+    }
+    else if ( string === 'Queen' )
+    {
+        return 12;
+    }
+    else if ( string === 'King' )
+    {
+        return 13;
+    }
+    else if ( string === 'Ace' )
+    {
+        return 1;
+    }
+    else
+    {
+        // Converts string to integer
+        return parseInt(string);
+    }
+}
+```
+
+Look up how to [convert a string to an integer](https://lmgtfy.app/?q=python+string+to+int).
