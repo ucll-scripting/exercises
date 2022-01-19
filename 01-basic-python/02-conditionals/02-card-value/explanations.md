@@ -11,6 +11,8 @@ Write a function `card_value(string)` that determines the value of the card.
 | Ace  | 1     |
 
 ```javascript
+// Note that Python and JavaScript have different naming conventions (https://www.python.org/dev/peps/pep-0008/#function-and-variable-names)
+// In Python you should name this function card_value instead of cardValue
 function cardValue(string)
 {
     if ( string === 'Jack' )
