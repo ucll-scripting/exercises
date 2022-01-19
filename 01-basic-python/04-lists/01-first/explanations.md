@@ -10,3 +10,10 @@ Syntactically, they are very similar to JavaScript's arrays.
 
 Write a function `first(xs)` that returns the first element of a list.
 There are no surprises here: your first guess will probably be correct.
+
+```javascript
+function first(xs)
+{
+    return xs[0];
+}
+```
