@@ -12,6 +12,9 @@ fi
 
 where all four occurrence of `id` are replaced by the argument.
 
+We don't provide a JavaScript version: this exercise relies on functionality
+that is not readily available in JavaScript.
+
 ## Multiline strings
 
 The exercise expects you to produce a multiline string. While it is certainly
@@ -23,7 +26,7 @@ Readability and correctness are of paramount importance; you shouldn't be making
 concessions regarding these.
 
 Python supports multiline strings. Instead of using `"..."` as string
-delimiters, use `"""..."""`.
+delimiters, use `"""..."""`. You can also prefix them with `f` so as to activate string interpolation.
 
 ## String-Related Functionality
 
@@ -74,7 +77,8 @@ c'''
 but this is rather confusing to make sense of. We'd rather avoid this approach.
 We'd rather have a correct string that is still readable in code.
 
-The [`dedent` function](https://docs.python.org/3.1/library/textwrap.html) from the `textwrap` module might come in handy: it removes the undesired leading spaces
+The [`dedent` function](https://docs.python.org/3.1/library/textwrap.html) from
+the `textwrap` module might come in handy: it removes the undesired leading spaces
 from each line. To make use of it, add the following line at the top of your source file:
 
 ```python
