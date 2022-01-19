@@ -1,9 +1,23 @@
 # Assignment
 
-Write a function `sign(x)`.
+Translate this JavaScript code into Python.
 
-* If `x` is strictly positive, `sign(x)` should return `1`.
-* If `x` is strictly negative, `sign(x)` should return `-1`.
-* If `x` is zero, `sign(x)` should return `0`.
+```javascript
+function sign(n)
+{
+    if ( n > 0 )
+    {
+        return 1;
+    }
+    else if ( n < 0 )
+    {
+        return -1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+```
 
-Look up what the syntax is of the `if` statement in Python.
+You will need to look up the [syntax](https://lmgtfy.app/?q=python+if+statement) of the `if` statement in Python.
