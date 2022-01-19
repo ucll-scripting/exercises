@@ -1,11 +1,23 @@
 # Assignment
 
-Python strings hide few surprises. Since scripting generally involves some form of string processing,
-it is advisable to familiarize yourself with the built-in functionality.
+Python strings hide few surprises.
+Scripting generally involves some form of string processing,
+so it is advisable to familiarize yourself with the built-in functionality.
 
-Write a function `format_time(h, m, s)` that, given three integers `h`, `m` and `s`,
+Translate the function below that, given three integers `h`, `m` and `s`,
 uses them to construct a string of the form `h:m:s`. All numbers must
 count exactly two digits. E.g., `format_time(1,2,3)` must produce `01:02:03`, not `1:2:3`.
+
+```javascript
+function formatTime(h, m, s)
+{
+    const hstr = `${h}`.padStart(2, '0');
+    const mstr = `${m}`.padStart(2, '0');
+    const sstr = `${s}`.padStart(2, '0');
+
+    return `${hstr}:${mstr}:${sstr}`;
+}
+```
 
 ## Conversion to string
 
@@ -44,5 +56,5 @@ In an f-string, all occurrences of `{expr}` are replaced by the value of `expr`.
 
 ## Padding Strings
 
-For single digit numbers, you need to add leading zeros: e.g., `"5"`
-must be expanded to `"05"`. Consult the [Python docs](https://docs.python.org/3/library/stdtypes.html#string-methods). Hint: `rjust`.
+We want each component two be exactly two digits long.
+This means that single digit numbers such as `"5"` need [padding](https://lmgtfy.app/?q=python+padding+string) to turn them into `"05"`.
