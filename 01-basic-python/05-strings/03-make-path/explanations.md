@@ -7,6 +7,9 @@ separated by slashes.
 For example, say `parts = ['a', 'b', 'c']`, `make_path(parts)`
 should then return `'a/b/c'`.
 
-As always, try to find built-in functionality that does most
-of the work for you. Hint: look for `join` in the
-[documentation](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str).
+```javascript
+function makePath(parts)
+{
+    return parts.join('/');
+}
+```
