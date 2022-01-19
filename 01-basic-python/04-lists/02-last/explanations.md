@@ -14,3 +14,11 @@ and moves backwards. For example, `xs[-1]`
 yields the last element of `xs`, `xs[-2]` the second to last, etc.
 
 Write a function `last(xs)` that returns the last element of `xs`.
+
+```javascript
+function last(xs)
+{
+    // Rely on negative indexing in Python
+    return xs[xs.length - 1];
+}
+```
