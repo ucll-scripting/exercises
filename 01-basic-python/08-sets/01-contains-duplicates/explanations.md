@@ -33,7 +33,7 @@ to a set that already contains `x` does literally nothing:
 Now, find a way to implement `contains_duplicates` using a set.
 After you have solved this exercise, you can run `benchmark.py`:
 it measures the difference in time between a naive implementation and one that uses sets.
-You will see the set-based solution easily runs 1000x faster.
+You will see the set-based solution easily runs 1000x faster for larger lists.
 
 Below is a JavaScript implementation that uses lists.
 More recent version of JavaScript have sets built-in, but you are probably not familiar with them.

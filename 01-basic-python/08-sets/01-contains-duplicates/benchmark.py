@@ -11,13 +11,26 @@ def containsDuplicatesWithSets(ns):
 
 from timeit import timeit
 
-ns = list(range(10000))
 
-def runNaive():
-    return containsDuplicatesNaive(ns)
+def benchmark(n):
+    ns = list(range(n))
 
-def runWithSets():
-    return containsDuplicatesWithSets(ns)
+    def runNaive():
+        return containsDuplicatesNaive(ns)
 
-print(f"Naive method: {timeit(runNaive, number=10)}s")
-print(f"Set method: {timeit(runWithSets, number=10)}s")
+    def runWithSets():
+        return containsDuplicatesWithSets(ns)
+
+    print(f"{n} elements")
+    t1 = timeit(runNaive, number=10)
+    print(f"Naive method: {t1}s")
+    t2 = timeit(runWithSets, number=10)
+    print(f"Set method  : {t2}s")
+    print(f'Speed improvement: {t1/t2}x')
+    print('')
+
+
+benchmark(1000)
+benchmark(5000)
+benchmark(10000)
+benchmark(20000)
