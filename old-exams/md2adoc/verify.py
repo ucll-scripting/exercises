@@ -1,0 +1,7 @@
+from verilib import *
+
+output_file = 'output.txt'
+
+assert_linecount(output_file, 5586)
+assert_file_contents_hash_to(output_file, 'fe9bbb7be6c890b952a41f3d25f7806b7eb172b8eb0c0d505b561e7e5dd95f28f8ae95afc731b87c8045af317d91888a37dcbcf802d5f7791fa206b458fe371f')
+compute_code_for_file(output_file)
