@@ -10,7 +10,8 @@ dictionary, where each word (key)
 is associated with its description (value).
 Dictionaries are data structures optimized for
 quickly looking up the value associated with a given
-key. The other way around is *possible*, but very slow.
+key. While the opposite direction (given a value finding the associated key) is *possible*,
+it is very slow and not built-in.
 
 A dictionary has the typical operations defined
 on them. Skim over the [documentation](https://docs.python.org/3/tutorial/datastructures.html#dictionaries):
@@ -31,8 +32,25 @@ For example,
 { 'a': 1, 'b': 2, 'c': 3 }
 ```
 
-For this, you'll need to find out the following:
+```javascript
+function frequencies(xs)
+{
+    // Look up how to represent the empty dictionary in Python
+    const result = {};
 
-* How to check if a key is present in the dictionary
-* How to look up a value
-* How to add and update key/value pairs
+    for ( const x of xs )
+    {
+        // Look up how to check if x occurs as key in the dictionary
+        if ( !(x in result) )
+        {
+            // Look up how to add new key/value pair
+            result[x] = 0;
+        }
+
+        // Look up how to update value
+        result[x]++;
+    }
+
+    return result;
+}
+```
