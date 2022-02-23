@@ -38,7 +38,7 @@ Also experiment to see what happens if the lists do not have the same size.
 
 Translate the function shown below.
 Given a list, e.g., `['a', 'b', 'c']` and pairs each element with its index:
-`[ [1, 'a'], [2, 'b'], [3, 'c'] ]`.
+`[ [0, 'a'], [1, 'b'], [2, 'c'] ]`.
 
 ```javascript
 function addIndices(xs)
