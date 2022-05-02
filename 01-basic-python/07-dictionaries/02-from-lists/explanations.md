@@ -12,5 +12,22 @@ element of `values`. For example,
 { 1: 'un', 2: 'deux', 3: 'trois' }
 ```
 
-You can solve this with one line of code. Hint: first make pairs (tuples of two)
-and look for how to create a dictionary from a list of tuples.
+You can solve this with one line of code: first make pairs (tuples of two)
+and look for how to [create a dictionary from a list of pairs](https://lmgtfy.app/?q=python+create+dictionary+from+pairs).
+
+```javascript
+function fromLists(keys, values)
+{
+    const result = {};
+
+    for ( let i = 0; i !== keys.length; ++i )
+    {
+        const key = keys[i];
+        const value = values[i];
+
+        result[key] = value;
+    }
+
+    return result;
+}
+```

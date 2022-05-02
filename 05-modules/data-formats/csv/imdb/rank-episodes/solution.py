@@ -17,7 +17,7 @@ with open("C:\\Users\\Ninov\\Downloads\\title.basics.tsv\\data.tsv", encoding='u
 # Stop if there we found zero or multiple series with the same name
 if len(rows) != 1:
     print(f"Found ${len(rows)} matches")
-    sys.exit(-1)
+    exit(-1)
 
 row = rows[0]
 series_id = row['tconst']
