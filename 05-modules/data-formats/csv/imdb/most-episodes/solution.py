@@ -8,7 +8,7 @@ def second(xs):
 
 table = {}
 
-with open("../title-episodes.tsv", encoding='utf-8') as file:
+with open("C:\\Users\\Ninov\\Downloads\\title.episode.tsv\\data.tsv", encoding='utf-8') as file:
     reader = csv.DictReader(file, delimiter='\t', quoting=csv.QUOTE_NONE)
     for row in reader:
         id = row['parentTconst']
@@ -21,7 +21,7 @@ max_episode_count = max(table.values())
 print(f'Max episode count: {max_episode_count}')
 series = { series_id for series_id, episode_count in table.items() if episode_count == max_episode_count }
 
-with open("../title-basics.tsv", encoding='utf-8') as file:
+with open("C:\\Users\\Ninov\\Downloads\\title.basics.tsv\\data.tsv", encoding='utf-8') as file:
     reader = csv.DictReader(file, delimiter='\t', quoting=csv.QUOTE_NONE)
     for row in reader:
         if row['tconst'] in series:

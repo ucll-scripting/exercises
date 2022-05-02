@@ -10,7 +10,7 @@ series_name = argv[1]
 
 
 # Find row(s) containing series_name
-with open("../title-basics.tsv", encoding='utf-8') as file:
+with open("C:\\Users\\Ninov\\Downloads\\title.basics.tsv\\data.tsv", encoding='utf-8') as file:
     reader = create_reader(file)
     rows = [ row for row in reader if row['originalTitle'] == series_name and row['titleType'] == 'tvSeries' ]
 
@@ -27,7 +27,7 @@ series_id = row['tconst']
 episode_data = {}
 
 # Collect episodes associated with series and store their season and episode_number
-with open('../title-episodes.tsv', encoding='utf-8') as file:
+with open("C:\\Users\\Ninov\\Downloads\\title.episode.tsv\\data.tsv", encoding='utf-8') as file:
     reader = create_reader(file)
     for row in reader:
         if row['parentTconst'] == series_id:
@@ -36,7 +36,7 @@ with open('../title-episodes.tsv', encoding='utf-8') as file:
 
 
 # Gather ratings
-with open('../title-ratings.tsv', encoding='utf-8') as file:
+with open("C:\\Users\\Ninov\\Downloads\\title.ratings.tsv\\data.tsv", encoding='utf-8') as file:
     reader = create_reader(file)
     for row in reader:
         id = row['tconst']
@@ -44,7 +44,7 @@ with open('../title-ratings.tsv', encoding='utf-8') as file:
             episode_data[id]['rating'] = float(row['averageRating'])
 
 # Gather titles
-with open("../title-basics.tsv", encoding='utf-8') as file:
+with open("C:\\Users\\Ninov\\Downloads\\title.basics.tsv\\data.tsv", encoding='utf-8') as file:
     reader = create_reader(file)
     for row in reader:
         id = row['tconst']

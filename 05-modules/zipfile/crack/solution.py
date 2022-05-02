@@ -2,6 +2,7 @@ from zipfile import ZipFile, BadZipFile
 from itertools import product
 import string
 import sys
+import time
 
 
 filename = 'crack.zip'
@@ -9,7 +10,6 @@ alphabet = string.ascii_lowercase
 
 with ZipFile(filename) as zip:
     for password in ("".join(combination) for combination in product(alphabet, repeat=4)):
-        print(f'Trying #{password}')
         pwd = bytes(password, 'ascii')
         try:
             bs = zip.read('file.txt', pwd=pwd)
@@ -21,5 +21,6 @@ with ZipFile(filename) as zip:
             pass
         except BadZipFile:
             pass
+   
 
 print('Failed to find password')

@@ -1,7 +1,7 @@
 import argparse
 import sys
 import re
-
+ 
 parser = argparse.ArgumentParser(prog='loc')
 parser.add_argument('-e' '--count-empty-lines', help='Counts empty lines', dest='count_empty_lines', action='store_true')
 parser.add_argument('--comment', help='Comment identifier')

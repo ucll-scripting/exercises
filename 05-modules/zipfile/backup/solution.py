@@ -13,8 +13,10 @@ parser.add_argument('root')
 args = parser.parse_args()
 
 now = datetime.now()
-filename = os.path.join(args.ziplocation, now.strftime("%Y-%m-%d.zip"))
+filename = os.path.join(os.path.abspath(args.ziplocation), now.strftime("%Y-%m-%d.zip"))
+print(filename)
 root = os.path.abspath(args.root)
+print(root)
 
 with ZipFile(filename, 'w') as zip:
     for directory, subdirs, files in os.walk(root):

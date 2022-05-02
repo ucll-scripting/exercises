@@ -9,13 +9,12 @@ uses them to construct a string of the form `h:m:s`. All numbers must
 count exactly two digits. E.g., `format_time(1,2,3)` must produce `01:02:03`, not `1:2:3`.
 
 ```javascript
-function formatTime(h, m, s)
-{
-    const hstr = `${h}`.padStart(2, '0');
-    const mstr = `${m}`.padStart(2, '0');
-    const sstr = `${s}`.padStart(2, '0');
+function formatTime(h, m, s) {
+	const hstr = `${h}`.padStart(2, "0");
+	const mstr = `${m}`.padStart(2, "0");
+	const sstr = `${s}`.padStart(2, "0");
 
-    return `${hstr}:${mstr}:${sstr}`;
+	return `${hstr}:${mstr}:${sstr}`;
 }
 ```
 
@@ -23,6 +22,8 @@ function formatTime(h, m, s)
 
 You will probably need to explicitly convert integers to strings.
 [Google how to do this](http://lmgtfy.com/?q=python+int+to+string).
+
+num=str(num) !
 
 ## String Interpolation
 
@@ -51,10 +52,20 @@ result = f'{h}:{m}:{s}'
 ```
 
 String interpolation needs to be explicitly activated by prefixing the string
-literal with an `f`. For this reason, these strings are also called *f-strings*.
+literal with an `f`. For this reason, these strings are also called _f-strings_.
 In an f-string, all occurrences of `{expr}` are replaced by the value of `expr`.
 
 ## Padding Strings
 
 We want each component two be exactly two digits long.
 This means that single digit numbers such as `"5"` need [padding](https://lmgtfy.app/?q=python+padding+string) to turn them into `"05"`.
+
+ljust and rjust => rjust to insert in begin
+
+Syntax: string.rjust(width, char)
+
+Parameters:
+
+Width -It is the length of the string after the padding is complete. Compulsory.
+Char– string to be padded, optional.
+Returns: returns a String which is placed right side with characters inserted to the beginning end.
